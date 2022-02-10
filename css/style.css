@@ -1,0 +1,1088 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+    box-sizing: border-box;
+}
+
+:root{
+    --sidebar-color: #FBEFDF;
+    --white: #ffffff;
+    --black: #000000;
+     --black2:#FFFDFB;
+
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Banner css */
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(../images/photo-1480506132288-68f7705954bd.jpg);
+    mix-blend-mode: normal;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: -1px 10px 5px;
+}
+.header{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: #000000;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    
+}
+.header-graphic{
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%;
+}
+.header.active{
+    width: 100%;
+    height: 100%;
+
+}
+.logo{
+    position: relative;
+    width: 300px;
+    padding: 5px;
+    height: 100%;
+}
+.logo img{
+    height: 70px;
+    width: 70px;
+    margin: 0 auto;
+}
+
+.navbar{
+    width: 100%;
+    padding: 12px;
+    height: 100%;
+}
+.navbar.active{
+    display: block;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+.navbar.active ul{
+    display: block;
+}
+.navbar ul li{
+    font-size: 1.2em;
+    list-style-type: none;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+    margin: 0 12px;
+    width: 100%;
+
+}
+.navbar ul li.active{
+    border-bottom: 3px solid #E57914;
+
+}
+.navbar ul li a{
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li a:hover{
+    color: #E57914;
+    transition: 0.5s;
+}
+.header.navbar-toggler{
+    width: 100px;
+    height: 50px;
+    background: transparent;
+    display: none;
+    margin: auto 10px;
+    border: none;
+    cursor: pointer;
+}
+.navbar-toggler i{
+    color: #fff;
+    font-size: 2.5em;
+}
+
+.contents{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    bottom: 0;
+}
+.social-links{
+    width: 100px;
+    display: block;
+    height: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    margin-top: auto;
+    margin-left: 12px;
+    margin-bottom: auto;
+}
+.social-links i{
+    color: #AB916C;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.0em;
+    cursor: pointer;
+}
+.contents-text{
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 30px;
+
+}
+.contents-text .line{
+    height: 4px;
+    background-color: #E57914;
+    width: 300px;
+    margin:auto auto;
+    border-radius: 4px;
+    margin-top: 10px;
+
+}
+.contents-text .title{
+    color: #E57914;
+    padding: 12px;
+    text-align: center;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: 800;
+    width: 500px;
+    margin: 20px auto;
+}
+.contents-text .desc{
+    font-size: 2.0em;
+    color: #fff;
+    font-weight: 900;
+    width: 100%;
+    text-align: center;
+    margin: 10px auto;
+}
+.contents-text .link{
+    width: 200px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contents-text .link a{
+    width: 100px;
+    background: #E57914;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 800;
+    border-radius: 18px;
+    padding: 10px;
+    font-size: 1.0em;
+    cursor: pointer;
+}
+.contents-text .link a:hover{
+    background: #000000;
+    color: #E57914;
+    transition: 0.5s;
+}
+.contents-image{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: end;
+}
+.contents-image img{
+    height: 600px;
+    width: 400px;
+}
+/* About css */
+
+.about{
+    width: 90%;
+    height: 100%;
+    margin: 24px auto;
+    padding: 20px;
+    display: block;
+    box-shadow: 0px 5px  5px grey;
+    border-radius: 20px;
+}
+.about .title{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    height: 40px;
+    margin-bottom:12px ;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.about .title .title-line{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+.about .title .title-line .line{
+    height: 1px;
+    background-color: #E57914;
+    width: 100%;
+    margin: auto 0;
+}
+.about .title .title-line .circle{
+    height: 10px;
+    width: 10px;
+    margin: auto 0;
+    border-radius: 50%;
+    border: 1px solid #E57914;
+}
+.about .title .title-text{
+    width: 30%;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.about .title .title-text h2{
+    margin: auto;
+    padding: 5px;
+    font-size: 0.8em;
+}
+.about-image{
+    width: 20%;
+    margin: 12px auto;
+    height: 200px;
+}
+.about-image img{
+    width: 200px;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #E57914;
+    margin-left: 12px;
+}
+.about-text{
+    background-color: #fff;
+    padding: 12px;
+    width: 80%;
+    margin: 12px auto;
+
+}
+.about-text .hi{
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 1.5em;
+}
+.about-text .text{
+    font-size: 1.0em;
+}
+.about-links{
+    display: flex;
+    background-color: #fff;
+    padding: 8px;
+    justify-content: end;
+    width: 80%;
+    margin: 0 auto;
+}
+.about-links a{
+    text-decoration: none;
+    color: #000000;
+    border: 2px solid #E57914;
+    padding: 8px;
+    margin-right: 12px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+.about-links a:hover{
+ color: #E57914;
+ border: 2px solid #000000;
+ transition: 0.5s;
+}
+/* Blogs */
+.blog{
+    width: 90%;
+    margin: 24px auto;
+    padding: 12px;
+}
+.blog-header,
+.skills-header,
+.newsletter-header,
+.services-header{
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    text-transform: uppercase;
+    border-bottom: 2px solid #E57914;
+}
+.blog-header h3{
+    font-size: 1.5em;
+    margin-left: 12px;
+}
+.blog-header a{
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #E57914;
+    font-weight: 800;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 16px;
+    padding: 5px;
+}
+.blog-header a:hover{
+    color: #000000;
+    transition: 0.5s;
+}
+
+.blog-body{
+    margin-top: 12px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+}
+.blog-col{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.blog-body a{
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+    padding: 6px;
+    width: 300px;
+    margin: 5px 12px;
+}
+.blog-body a:hover{
+    font-weight: 700;
+    transition: 0.2s;
+    background-color: antiquewhite;
+    margin: 0;
+    border-radius: 10px;
+}
+.blog-image{
+    width: 90%;
+    margin: 4px auto;
+}
+.blog-image img{
+    width: 100%;
+    height: 200px;
+}
+.blog-title{
+    background-color: #E57914;
+    padding: 5px;
+    left: 0;
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: 800;
+    width: 150px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.blog-details{
+    padding: 12px;
+    text-transform: capitalize;
+    font-size: 1.0em;
+}
+.blog-contents{
+    margin: 0 auto;
+    padding: 12px;
+    width: 900px;
+}
+.search-bar{
+    width: 600px;
+    margin:0 auto;
+    padding: 10px;
+}
+.search-bar form{
+    width: 100%;
+    padding: 10px;
+}
+.search-bar form input{
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9em;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #E57914;
+    cursor: pointer;
+
+}
+.blog-card{
+    display: flex;
+    padding: 12px;
+    width: 100%;
+    height: 100%;
+    margin: 24px auto;
+}
+.card-image{
+    width: 700px;
+    height: 100%;
+    padding: 12px;
+}
+.card-image img{
+    width: 100%;
+    height: 400px;
+}
+.card-text{
+    padding: 12px;
+    width: 400px;
+    height: 100%;
+    display: block;
+}
+.datetime{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.75em;
+}
+.card-title{
+    color: #E57914;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-bottom: 24px;
+    width:100%;
+    padding: 12px;
+}
+.card-details{
+    font-size: 1.1em;
+    margin-bottom: 24px;
+    width: 100%;
+    padding: 12px;
+
+}
+.card-link{
+width: 100%;
+padding: 7px;
+display: flex;
+align-items: flex-end;
+}
+.card-link a{
+    text-decoration: none;
+    color: #E57914;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: auto;
+    padding: 6px;
+    width: 100%;
+    text-align: right;
+}
+.card-link a:hover{
+    color: #000000;
+    transition: 0.5s;
+}
+.interaction{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    bottom: 0;
+}
+.icons{
+    
+    padding: 5px;
+    display: flex;
+    margin-bottom: 14px;
+}
+.icons label{
+    background-color: azure;
+    width: 100px;
+    height: 100%;
+    padding: 6px;
+    margin: 0 auto;
+    border-radius: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+.icons label i{
+    cursor: pointer;
+    color: #E57914!important;
+    font-weight: 700;
+    
+}
+.interaction form{
+    width: 100%;
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+.interaction form input{
+    width: 100%;
+    padding: 7px;
+    outline: none;
+    border-radius:20px ;
+    border: 1px solid #000000;
+}
+.interaction form button{
+    width: 70px;
+    margin: 0 6px;
+    text-align: center;
+    background: #E57914;
+    border: none;
+    color: #000000;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+/* skills,newsletter,services css */
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 12px;
+    display: flex;
+    height: 100%;
+}
+.container-2{
+    width: 100%;
+    margin-bottom: 24px;
+    margin-left:  12px;
+    margin-right: 12px;
+}
+.skills{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    box-shadow: -5px 5px  5px grey;
+    margin-bottom: 24px;
+}
+.skills-image{
+    margin: 12px auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.skills img{
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    border-radius: 12px;
+}
+.newsletter{
+    margin-top: 12px;
+    padding: 5px;
+    box-shadow: -5px 5px  5px grey;
+}
+.newsletter form{
+    margin-top: 12px;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.newsletter form input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    margin:0 12px ;
+    border-radius: 5px;
+    outline: none;
+}
+.newsletter form button{
+    width: 200px;
+    text-transform: uppercase;
+    background-color: #E57914;
+    border: none;
+    font-weight: 700;
+    color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.newsletter form button:hover{
+    color: #E57914;
+    background-color: #000000;
+    transition: 0.6s;
+}
+.services{
+    width: 50%;
+    margin: 0 12px;
+    padding: 12px;
+    box-shadow: -5px 5px 5px grey;
+}
+.services ul{
+    padding: 12px;
+    margin-top: 12px;
+}
+.services ul li{
+    text-transform: uppercase;
+    padding: 6px;
+    margin-bottom: 12px;
+    list-style-type: none;
+}
+
+.footer{
+    background: #000000;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 12px;
+}
+/*Contact page css*/
+
+.contact-body{
+    margin: 24px auto;
+    width: 900px;
+    height: 100%;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form{
+    display: block;
+    border: 2px solid #E57914;
+    border-radius: 20px;
+    width: 100%;
+    padding: 12px;
+    height: 100%;
+    margin: 0 12px;
+}
+.contact-form h1,.adminlogin-form h1{
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1.0em;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 18px;
+}
+.contact-form form{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+
+}
+.contact-form form .names{
+    display: flex;
+    justify-content: space-between;
+}
+.input-group{
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 4px;
+    height: 100%;
+
+}
+.input-group label{
+    width: 100%;
+    padding: 5px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+.input-group input,textarea{
+    padding: 9px;
+    outline: none;
+    border: 1px solid #E57914;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+}
+.contact-form form button,.adminlogin-form form button{
+    padding: 5px;
+    background-color:#E57914 ;
+    text-align: center;
+    border: none;
+    text-transform: uppercase;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000000;
+    font-weight: 700;
+}
+.contact-form form button:hover,.adminlogin-form form button:hover{
+   background-color:#000000;
+   color: #E57914 ;
+   transition: 0.5s;
+}
+.contacts{
+    width: 300px;
+    margin: 0 12px;
+    height: 100%;
+    padding: 9px;
+    box-shadow: 0 1px 5px;
+    display: block;
+}
+.contacts h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.0em;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #E57914 ;
+}
+.contacts .telephone{
+    padding: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 600;
+}
+.contacts .whatsaap{
+    padding: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 600;
+}
+.social-medialinks{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+.social-medialinks i{
+     cursor: pointer;
+     font-size: 1.0em;
+}
+
+/*Admin pages css*/
+.admin-login{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height:300px ;
+    margin: 100px auto;
+}
+.admin-login-sidebar{
+    background-color: #000000;
+    width: 250px;
+    height: 100%;
+}
+.adminlogin-form{
+    display: block;
+    width: 100%;
+    padding: 6px;
+    border: 2px solid #E57914;
+    border-left:none ;
+}
+.adminlogin-form form{
+    width: 100%;
+}
+
+.admin-body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar{
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background:var(--sidebar-color) ;
+  border-left:10px solid var(--sidebar-color) ;
+  transition: 0.5s;
+  overflow: hidden;
+  left: 0;
+}
+
+.sidebar ul{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.sidebar ul li{
+  position: relative;
+  list-style: none;
+  border-bottom-left-radius: 60px;
+  border-top-left-radius: 60px;
+  text-transform: uppercase;
+  padding-left: 6px;
+  margin-bottom: 12px;
+}
+.sidebar ul li.active{
+    background: var(--white);
+}
+.sidebar ul li:hover{
+  background: var(--white);
+}
+.sidebar ul li:nth-child(1){
+  margin-bottom: 10px;
+  pointer-events: none;
+}
+.sidebar ul li a{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--black);
+}
+.sidebar ul li :hover a{
+  color: var(--black);
+}
+.sidebar ul li a .icon{
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin-right: 10px;
+  text-align: center;
+}
+.sidebar ul li a .icon i{
+  font-size: 1.75em;
+}
+.sidebar ul li a .title{
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+  width: 100%;
+
+}
+.admin-body-contents{
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: 0.5s;
+}
+.topbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 10px;
+    background: var(--black2);
+    margin-bottom: 10px;
+}
+.topbar .navbar-toggler{
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.topbar .navbar-toggler i{
+    color: var(--black);
+}
+.user{
+    width: 300px;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: end;
+    overflow: hidden;
+    object-fit: cover;
+    padding: 4px;
+}
+.user a{
+     padding: 6px;
+     margin: 0 14px;
+     text-decoration: none;
+     color: var(--black);
+}
+.user a i{
+    font-size: 1.3em;
+    color: #AB916C;
+
+}
+.account-detailsdropdown {
+    width: 100%;
+    border: 1px solid black;
+    padding: 12px;
+    height: 100%;
+    
+}
+.account-detailsdropdown a{
+;
+}
+/*Responsivness*/
+
+@media (max-width: 1000px) { 
+    .header{
+        display: block;
+    }
+    .logo{
+        width: 100px;
+    }
+    .navbar-toggler{
+        display: block;
+    }
+    .navbar{
+        display: none;
+    }
+    .navbar ul li{
+        font-size: 1.20em;
+    }
+    .navbar ul li.active{
+        border-bottom: none;
+    }
+    .contents{
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin-top: 10px;
+        bottom: 0;
+    }
+
+    .social-links{
+        width: 100%;
+        display: flex;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+    }
+    .contents-image{
+    display: none;
+   
+    }
+    .contents-text{
+        margin-left: none;
+    }
+    .contents-text .line{
+        width: 100%;
+    }
+    .contents-text .title{
+        width: 100%;
+    }
+    .about .title {
+        width: 100%;
+    }
+    .about .title .title-text{
+        width: 60%;
+    }
+    .about-image{
+        width: 50%;
+    }
+    .about-text .hi{
+        font-size: 0.75em;
+    }
+    .about-text .text {
+        font-size: 0.9em;
+    }
+    .blog{
+        border-bottom: 1px solid grey;
+    }
+    .blog-body{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .blog-body a{
+        width: 100%;
+    }
+    .blog-body a:hover{
+        margin: 5px 12px;
+    }
+    .container{
+        display: block;
+    }
+    .skills-image{
+        width: 110px;
+        height: 100%;
+        display: block;
+        padding: 5px;
+    }
+    .skills-image img{
+        width: 100px;
+        height: 100px;
+    }
+    .newsletter form{
+        display: block;
+    }
+     .newsletter form input{
+        width: 100%;
+        padding: 6px;
+        margin-bottom:12px ;
+     }
+     .newsletter form button{
+        height: 100%;
+        width: 100px;
+        padding: 12px;
+     }
+    .services{
+        width: 100%;
+    }
+    .skills-image{
+        display: block;
+    }
+    .blog-card{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .card-image{
+    width: 100%;
+    height: 100%;
+    }
+    .card-image img{
+    height: 100%;
+    }
+    .card-text{
+    width: 100%;
+    }
+
+    .contact-body{
+        width: 100%;
+        display: block;
+        padding: 12px;
+    }
+    .contact-form{
+        margin: 24px 0;
+    }
+    .contact-form form .names{
+        display: block;
+    }
+    .contacts{
+        width: 100%;
+        margin: 0;
+    }
+    .contacts .telephone{
+        justify-content: center;
+    }
+    .contacts .whatsaap{
+         justify-content: center;
+
+    }
+    .blog-contents{
+        width: 100%;
+        padding: 6px;
+    }
+    .search-bar{
+        width: 100%;
+    }
+    .admin-login{
+        width: 100%;
+    }
+    .admin-login-sidebar{
+        width: 30px;
+    }
+ 
+}
