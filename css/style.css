@@ -11,7 +11,10 @@
     --sidebar-color: #FBEFDF;
     --white: #ffffff;
     --black: #000000;
-     --black2:#FFFDFB;
+    --pink2:#FFFDFB;
+    --admin-icons: #AB916C;
+    --input-border: #E57914;
+    --admin-input-border: #AB916C;
 
 }
 
@@ -108,7 +111,7 @@ body{
     color: #E57914;
     transition: 0.5s;
 }
-.header.navbar-toggler{
+.header .navbar-toggler{
     width: 100px;
     height: 50px;
     background: transparent;
@@ -117,7 +120,7 @@ body{
     border: none;
     cursor: pointer;
 }
-.navbar-toggler i{
+.header .navbar-toggler i{
     color: #fff;
     font-size: 2.5em;
 }
@@ -138,13 +141,12 @@ body{
     border-radius: 20px;
     margin-top: auto;
     margin-left: 12px;
-    margin-bottom: auto;
 }
 .social-links i{
     color: #AB916C;
     margin-left: auto;
     margin-right: auto;
-    font-size: 2.0em;
+    font-size: 1.em;
     cursor: pointer;
 }
 .contents-text{
@@ -534,8 +536,8 @@ align-items: flex-end;
     width: 100%;
     padding: 7px;
     outline: none;
-    border-radius:20px ;
-    border: 1px solid #000000;
+    border-radius:5px ;
+    border: 1px solid var(--input-border);
 }
 .interaction form button{
     width: 70px;
@@ -545,7 +547,7 @@ align-items: flex-end;
     border: none;
     color: #000000;
     font-weight: 700;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 /* skills,newsletter,services css */
@@ -597,7 +599,7 @@ align-items: flex-end;
 .newsletter form input{
     width: 100%;
     padding: 12px;
-    border: 1px solid black;
+    
     margin:0 12px ;
     border-radius: 5px;
     outline: none;
@@ -643,6 +645,7 @@ align-items: flex-end;
     text-transform: uppercase;
     text-align: center;
     margin-top: 12px;
+    bottom: 0;
 }
 /*Contact page css*/
 
@@ -703,7 +706,7 @@ align-items: flex-end;
 .input-group input,textarea{
     padding: 9px;
     outline: none;
-    border: 1px solid #E57914;
+    border: 1px solid var(--input-border);
     border-radius: 4px;
     width: 100%;
     cursor: pointer;
@@ -794,6 +797,9 @@ align-items: flex-end;
     position: relative;
     display: flex;
     justify-content: space-between;
+}
+.admin-body input{
+    border: 1px solid var(--admin-input-border) !important;
 }
 .sidebar{
   position: fixed;
@@ -891,11 +897,11 @@ align-items: flex-end;
 }
 .topbar .navbar-toggler i{
     color: var(--black);
+    font-size: 36px;
 }
 .user{
     width: 300px;
     height: 50px;
-    border: 1px solid black;
     display: flex;
     justify-content: end;
     overflow: hidden;
@@ -906,23 +912,342 @@ align-items: flex-end;
      padding: 6px;
      margin: 0 14px;
      text-decoration: none;
-     color: var(--black);
+     color: var(--admin-icons);
+}
+.user a:hover{
+    color: var(--black);
+    transition: 0.6s;
 }
 .user a i{
     font-size: 1.3em;
-    color: #AB916C;
+    
 
 }
 .account-detailsdropdown {
     width: 100%;
-    border: 1px solid black;
-    padding: 12px;
     height: 100%;
+    padding: 4px;
+    background: var(--white);
+    border-radius: 20px;
+    align-items:center ;
     
 }
 .account-detailsdropdown a{
-;
+    text-decoration: none;
+    color: var(--darkblue);
+    cursor: pointer;
+    padding: 3px;
 }
+.account-detailsdropdown a i{
+    font-size: 1.2em;
+    margin: 0 12px;
+}
+.account-detailsdropdown a span{
+    font-size: 1.0em;
+}
+.cardbox{
+position: relative;
+width: 100%;
+height: 100%;
+padding: 10px;
+display: flex;
+justify-content: space-around;
+
+}
+.cardbox .card{
+  position: relative;
+  width: 200px;
+  background: var(--pink2);
+  padding:10px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 4px 25px rgb(0,0,0,0.08);
+  margin-top: 10px;
+}
+.cardbox .card:hover{
+  background: var(--white);
+  transition: 0.7s;
+}
+
+.cardbox .card .numbers{
+  position: relative;
+  font-weight: 700;
+  font-size: 1.7em;
+  color: var(--black);
+  text-align: left;
+}
+.cardbox .card:hover .numbers{
+  color: var(--admin-icons);
+}
+.cardbox .card .card-name{
+  color: var(--black);
+  font-size: 0.8em;
+  margin-top: 2px;
+  text-align: left;
+  text-transform: capitalize;
+}
+.cardbox .card:hover .card-name{
+  color: var(--admin-icons);
+}
+.cardbox .card .icon{
+  font-size: 2.0em;
+  color:var(--black);
+}
+.cardbox .card:hover .icon{
+  color: var(--admin-icons);
+}
+.article-post-form{
+    
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+    position: relative;
+    margin: 24px 0;
+}
+.article-post-form form{
+    
+    width: 800px;
+    margin: 0 auto;
+    height: 100%;
+}
+.article-post-form .input-group input,.article-post-form .input-group textarea{
+    border: 2px solid var(--admin-input-border) !important;
+    color: var(--admin-input-border);
+}
+.article-post-form .buttons{
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 3px 0;
+}
+.article-post-form .buttons .comments{
+    display: flex;
+    justify-content: start;
+    
+    width: 200px;
+    padding: 3px;
+}
+.article-post-form .buttons .comments input{
+    padding: 6px;
+   margin: 0 12px;
+}
+.article-post-form .buttons .comments label{
+    text-transform: capitalize !important;
+    font-size: 0.75em !important;
+    color: var(--admin-input-border);
+}
+.article-post-form .buttons .button{
+    width: 100px;
+}
+.article-post-form .buttons .button button{
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    background: var(--admin-input-border);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+.article-post-form .buttons .button button:hover{
+    background: #BEA47F;
+    transition: 0.7s;
+}
+
+.blog-highliths{
+    display: flex;
+    width: 100%;
+    height: 100%;
+   
+    padding: 6px;
+    margin: 24px 0;
+}
+.highliths{
+   
+    width: 600px;
+    height: 100%;
+    padding: 6px;
+    margin: 0 6px;
+    display: block;
+    background: var(--pink2);
+}
+.highliths-header{
+    padding: 3px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-bottom: 2px solid var(--admin-input-border);
+}
+.head{
+    text-transform: uppercase;
+    font-size: 0.6em;
+}
+.tail{
+    font-size: 0.8em;
+    text-transform: lowercase;
+    font-weight: 600;
+}
+.highliths-left{
+    display: flex;
+   
+    margin: 4px 0;
+    padding: 4px;
+}
+.left{
+   
+    width: 100%;
+    margin: 0 4px;
+    height: 100%;
+    border-right: 1px solid var(--admin-input-border);
+    display: block;
+}
+.highliths-title{
+    text-transform: uppercase;
+    font-size: 0.59em;
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+.left-head{
+    display: flex;
+    margin: 4px 0 10px;
+}
+.left-head p{
+    margin: 0 2px;
+    font-size: 0.8em;
+    padding: 4px;
+}
+.highliths-paragraph{
+    font-size: 0.9em;
+}
+.right{
+   
+    width: 100%;
+    margin: 0 4px;
+    display: block;
+    height: 100%;
+}
+.top,.bottom{
+   
+    display: block;
+    margin: 2px 0;
+
+}
+.top{
+    border-bottom: 2px solid var(--admin-input-border);
+}
+.top-text,.bottom-text{
+    display: flex;
+    text-transform: capitalize;
+    font-weight: 600;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.8em;
+}
+.highlits-right{
+    
+    height: 100%;
+    padding: 6px;
+    margin: 0 auto;
+    width: 400px;
+}
+.card-highlight{
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    margin: 24px 5px 0;
+    font-size: 1.0em;
+}
+.card-highlight .numbers{
+    font-weight: 700;
+    font-size: 0.8em;
+}
+.right-head{
+    font-size: 1.0em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.blog-lists{
+   
+    width: 100%;
+    padding: 6px;
+    display: block;
+    position: relative;
+    margin: 24px 0;
+}
+.list-header{
+    text-transform: uppercase;
+    font-size: 0.65em;
+    margin-bottom: 5px ;
+    width: 100%;
+}
+.blog-lists form{
+   
+    padding: 6px;
+    display: block;
+    background: var(--pink2);
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+table thead td{
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 10px;
+}
+table tbody td{
+    margin-top: 10px;
+    padding: 10px;
+}
+.action-button{
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    width: 60px;
+    height: 100%;
+}
+.action-button button{
+    margin: 0 6px;
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--admin-icons);
+}
+.action-button button:hover{
+    color: var(--black);
+    transition: 0.6s;
+}
+.action-bar{
+    display: flex;
+    padding: 6px;
+    text-align: right;
+    width: 100%;
+    margin-bottom: 24px;
+    border-bottom:1px solid var(--admin-input-border) ;
+}
+
+.status{
+    width: 700px;
+    margin-left: auto;
+}
+
+
+
+
+
+
+
+
+
 /*Responsivness*/
 
 @media (max-width: 1000px) { 
