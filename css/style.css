@@ -10,17 +10,26 @@
 :root{
     --sidebar-color: #FBEFDF;
     --white: #ffffff;
+    --white2:#F5F0EA;
     --black: #000000;
     --pink2:#FFFDFB;
     --admin-icons: #AB916C;
-    --input-border: #E57914;
+    --chocolate:#AB916C;
     --admin-input-border: #AB916C;
+    --banner-texts:#E57914;
+    --error: red;
 
 }
 
 body{
     min-height: 100vh;
     overflow-x: hidden;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 /* Banner css */
@@ -98,7 +107,7 @@ body{
 
 }
 .navbar ul li.active{
-    border-bottom: 3px solid #E57914;
+    border-bottom: 3px solid var(--chocolate);
 
 }
 .navbar ul li a{
@@ -108,7 +117,7 @@ body{
     text-transform: uppercase;
 }
 .navbar ul li a:hover{
-    color: #E57914;
+    color: var(--chocolate);
     transition: 0.5s;
 }
 .header .navbar-toggler{
@@ -146,7 +155,7 @@ body{
     color: #AB916C;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.em;
+    font-size: 1.6em;
     cursor: pointer;
 }
 .contents-text{
@@ -159,7 +168,7 @@ body{
 }
 .contents-text .line{
     height: 4px;
-    background-color: #E57914;
+    background-color: var(--banner-texts);
     width: 300px;
     margin:auto auto;
     border-radius: 4px;
@@ -167,7 +176,7 @@ body{
 
 }
 .contents-text .title{
-    color: #E57914;
+    color: var(--banner-texts);
     padding: 12px;
     text-align: center;
     font-size: 0.8em;
@@ -192,7 +201,7 @@ body{
 }
 .contents-text .link a{
     width: 100px;
-    background: #E57914;
+    background: var(--chocolate);
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
@@ -205,7 +214,7 @@ body{
 }
 .contents-text .link a:hover{
     background: #000000;
-    color: #E57914;
+    color: var(--chocolate);
     transition: 0.5s;
 }
 .contents-image{
@@ -248,7 +257,7 @@ body{
 }
 .about .title .title-line .line{
     height: 1px;
-    background-color: #E57914;
+    background-color: var(--chocolate);
     width: 100%;
     margin: auto 0;
 }
@@ -257,7 +266,7 @@ body{
     width: 10px;
     margin: auto 0;
     border-radius: 50%;
-    border: 1px solid #E57914;
+    border: 1px solid var(--chocolate);
 }
 .about .title .title-text{
     width: 30%;
@@ -274,13 +283,13 @@ body{
     width: 20%;
     margin: 12px auto;
     height: 200px;
+    padding: 12px;
 }
 .about-image img{
-    width: 200px;
+    width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 3px solid #E57914;
-    margin-left: 12px;
+    border: 3px solid var(--chocolate);
 }
 .about-text{
     background-color: #fff;
@@ -304,21 +313,24 @@ body{
     padding: 8px;
     justify-content: end;
     width: 80%;
+    height: 100%;
     margin: 0 auto;
+    
 }
 .about-links a{
     text-decoration: none;
     color: #000000;
-    border: 2px solid #E57914;
+    border: 2px solid var(--chocolate);
     padding: 8px;
     margin-right: 12px;
     text-transform: uppercase;
     border-radius: 20px;
     text-align: center;
     font-weight: 700;
+    font-size: 12px;
 }
 .about-links a:hover{
- color: #E57914;
+ color: var(--chocolate);
  border: 2px solid #000000;
  transition: 0.5s;
 }
@@ -336,7 +348,7 @@ body{
     padding: 5px;
     justify-content: space-between;
     text-transform: uppercase;
-    border-bottom: 2px solid #E57914;
+    border-bottom: 2px solid var(--chocolate);
 }
 .blog-header h3{
     font-size: 1.5em;
@@ -345,7 +357,7 @@ body{
 .blog-header a{
     font-size: 0.8em;
     text-decoration: none;
-    color: #E57914;
+    color: var(--chocolate);
     font-weight: 800;
     text-align: center;
     cursor: pointer;
@@ -394,7 +406,7 @@ body{
     height: 200px;
 }
 .blog-title{
-    background-color: #E57914;
+    background-color: var(--chocolate);
     padding: 5px;
     left: 0;
     text-transform: uppercase;
@@ -415,23 +427,40 @@ body{
     width: 900px;
 }
 .search-bar{
-    width: 600px;
+    width: 700px;
     margin:0 auto;
     padding: 10px;
 }
 .search-bar form{
     width: 100%;
     padding: 10px;
+    display: flex;
 }
 .search-bar form input{
     width: 100%;
-    padding: 8px;
+    padding:0 13px;
     font-size: 0.9em;
     border-radius: 10px;
     outline: none;
-    border: 1px solid #E57914;
+    border: 1px solid var(--chocolate);
     cursor: pointer;
 
+}
+.search-bar form button{
+    cursor: pointer;
+    background: transparent;
+    font-weight: 600;
+    border:none;
+    outline: none;
+    color: var(--admin-icons);
+    font-size: 1.5em;
+    margin: 0 5px;
+    width: 47px;
+    height: 42px;
+}
+.search-bar form button:hover{
+    color: var(--black);
+    transition: 0.8s;
 }
 .blog-card{
     display: flex;
@@ -464,7 +493,7 @@ body{
     font-size: 0.75em;
 }
 .card-title{
-    color: #E57914;
+    color: var(--chocolate);
     font-weight: 700;
     font-size: 1.5em;
     margin-bottom: 24px;
@@ -486,7 +515,7 @@ align-items: flex-end;
 }
 .card-link a{
     text-decoration: none;
-    color: #E57914;
+    color: var(--chocolate);
     font-weight: 700;
     cursor: pointer;
     margin-right: auto;
@@ -503,6 +532,7 @@ align-items: flex-end;
     height: 100%;
     padding: 5px;
     bottom: 0;
+    display: none;
 }
 .icons{
     
@@ -522,7 +552,7 @@ align-items: flex-end;
 }
 .icons label i{
     cursor: pointer;
-    color: #E57914!important;
+    color: var(--chocolate)!important;
     font-weight: 700;
     
 }
@@ -537,13 +567,13 @@ align-items: flex-end;
     padding: 7px;
     outline: none;
     border-radius:5px ;
-    border: 1px solid var(--input-border);
+    border: 1px solid var(--chocolate);
 }
 .interaction form button{
     width: 70px;
     margin: 0 6px;
     text-align: center;
-    background: #E57914;
+    background: var(--chocolate);
     border: none;
     color: #000000;
     font-weight: 700;
@@ -557,6 +587,7 @@ align-items: flex-end;
     padding: 12px;
     display: flex;
     height: 100%;
+    margin: 24px auto;
 }
 .container-2{
     width: 100%;
@@ -599,7 +630,7 @@ align-items: flex-end;
 .newsletter form input{
     width: 100%;
     padding: 12px;
-    
+    border: 1px solid var(--chocolate);
     margin:0 12px ;
     border-radius: 5px;
     outline: none;
@@ -607,7 +638,7 @@ align-items: flex-end;
 .newsletter form button{
     width: 200px;
     text-transform: uppercase;
-    background-color: #E57914;
+    background-color: var(--chocolate);
     border: none;
     font-weight: 700;
     color: #000000;
@@ -615,12 +646,13 @@ align-items: flex-end;
     cursor: pointer;
 }
 .newsletter form button:hover{
-    color: #E57914;
+    color: var(--chocolate);
     background-color: #000000;
     transition: 0.6s;
 }
 .services{
     width: 50%;
+    height: 100%;
     margin: 0 12px;
     padding: 12px;
     box-shadow: -5px 5px 5px grey;
@@ -640,12 +672,12 @@ align-items: flex-end;
     background: #000000;
     color: #fff;
     width: 100%;
-    height: 100%;
+    height: 40px;
     padding: 12px;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 12px;
-    bottom: 0;
+    margin-top: 36px;
+    
 }
 /*Contact page css*/
 
@@ -660,7 +692,7 @@ align-items: flex-end;
 
 .contact-form{
     display: block;
-    border: 2px solid #E57914;
+    border: 2px solid var(--chocolate);
     border-radius: 20px;
     width: 100%;
     padding: 12px;
@@ -706,14 +738,14 @@ align-items: flex-end;
 .input-group input,textarea{
     padding: 9px;
     outline: none;
-    border: 1px solid var(--input-border);
+    border: 1px solid var(--chocolate);
     border-radius: 4px;
     width: 100%;
     cursor: pointer;
 }
 .contact-form form button,.adminlogin-form form button{
     padding: 5px;
-    background-color:#E57914 ;
+    background-color:var(--chocolate) ;
     text-align: center;
     border: none;
     text-transform: uppercase;
@@ -725,7 +757,7 @@ align-items: flex-end;
 }
 .contact-form form button:hover,.adminlogin-form form button:hover{
    background-color:#000000;
-   color: #E57914 ;
+   color: var(--chocolate) ;
    transition: 0.5s;
 }
 .contacts{
@@ -741,7 +773,7 @@ align-items: flex-end;
     text-transform: uppercase;
     font-size: 1.0em;
     margin-bottom: 18px;
-    border-bottom: 1px solid #E57914 ;
+    border-bottom: 1px solid var(--chocolate) ;
 }
 .contacts .telephone{
     padding: 5px;
@@ -767,485 +799,206 @@ align-items: flex-end;
      font-size: 1.0em;
 }
 
-/*Admin pages css*/
-.admin-login{
-    display: flex;
-    justify-content: center;
-    width: 600px;
-    height:300px ;
-    margin: 100px auto;
-}
-.admin-login-sidebar{
-    background-color: #000000;
-    width: 250px;
+/* projects */
+.projects{
+    
+    width: 1200px;
+    margin: 24px auto;
     height: 100%;
-}
-.adminlogin-form{
     display: block;
-    width: 100%;
     padding: 6px;
-    border: 2px solid #E57914;
-    border-left:none ;
 }
-.adminlogin-form form{
-    width: 100%;
+.projects .projects-title{
+    text-transform: uppercase;
+    font-size: 0.5em;
+    text-align: center;
+    margin:5px auto 5px;
 }
 
-.admin-body{
-    width: 100%;
-    height: 100vh;
-    position: relative;
+.recent-projects-cards{
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    padding: 0 0 24px;
+    height: 100%;
+    margin: auto;
+    overflow-x: scroll;
 }
-.admin-body input{
-    border: 1px solid var(--admin-input-border) !important;
-}
-.sidebar{
-  position: fixed;
-  width: 300px;
-  height: 100%;
-  background:var(--sidebar-color) ;
-  border-left:10px solid var(--sidebar-color) ;
-  transition: 0.5s;
-  overflow: hidden;
-  left: 0;
-}
-
-.sidebar ul{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-.sidebar ul li{
-  position: relative;
-  list-style: none;
-  border-bottom-left-radius: 60px;
-  border-top-left-radius: 60px;
-  text-transform: uppercase;
-  padding-left: 6px;
-  margin-bottom: 12px;
-}
-.sidebar ul li.active{
+.project-card{
+    display: block;
+    border-radius: 10px;
+    width: 400px;
+    height: 100%;
+    padding: 0 12px 20px;
     background: var(--white);
-}
-.sidebar ul li:hover{
-  background: var(--white);
-}
-.sidebar ul li:nth-child(1){
-  margin-bottom: 10px;
-  pointer-events: none;
-}
-.sidebar ul li a{
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  text-decoration: none;
-  color: var(--black);
-}
-.sidebar ul li :hover a{
-  color: var(--black);
-}
-.sidebar ul li a .icon{
-  position: relative;
-  display: block;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  margin-right: 10px;
-  text-align: center;
-}
-.sidebar ul li a .icon i{
-  font-size: 1.75em;
-}
-.sidebar ul li a .title{
-  position: relative;
-  display: block;
-  padding: 0 10px;
-  height: 60px;
-  line-height: 60px;
-  text-align: start;
-  white-space: nowrap;
-  width: 100%;
-
-}
-.admin-body-contents{
-  position: absolute;
-  width: calc(100% - 300px);
-  left: 300px;
-  min-height: 100vh;
-  background: var(--white);
-  transition: 0.5s;
-}
-.topbar{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 4px 10px;
-    background: var(--black2);
-    margin-bottom: 10px;
-}
-.topbar .navbar-toggler{
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  outline: none;
-}
-.topbar .navbar-toggler i{
-    color: var(--black);
-    font-size: 36px;
-}
-.user{
-    width: 300px;
-    height: 50px;
-    display: flex;
-    justify-content: end;
-    overflow: hidden;
-    object-fit: cover;
-    padding: 4px;
-}
-.user a{
-     padding: 6px;
-     margin: 0 14px;
-     text-decoration: none;
-     color: var(--admin-icons);
-}
-.user a:hover{
-    color: var(--black);
-    transition: 0.6s;
-}
-.user a i{
-    font-size: 1.3em;
+    margin: 0 10px;
+    box-shadow: 0 3px 10px var(--admin-input-border);
     
+}
+
+.project-card .project-image{
+    
+    width: 300px;
+    height: 200px;
+    margin: 6px auto;
 
 }
-.account-detailsdropdown {
+
+.project-card .project-image img{
     width: 100%;
     height: 100%;
+}
+.project-card .descriptions{
+    
+    margin-bottom: 12px;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    padding: 0 6px;
+    height: 90px;
+    overflow-y: auto;
+   
+}
+.project-card .descriptions .details{
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 0.8em;
+    width: 100%;
+}
+.project-card .descriptions .link{
+    
+    margin: 12px auto;
+    text-align: center;
+    width: 100px;
+    padding: 8px;
+
+}
+.project-card .descriptions .link a{
     padding: 4px;
-    background: var(--white);
-    border-radius: 20px;
-    align-items:center ;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.8em;
+    background: var(--admin-input-border);
+    color: var(--black);
+    font-weight: 700px;
+}
+
+.myprojects{
+    
+    padding: 12px;
+    height: 500px;
+    overflow-y: scroll;
+}
+.project-head{
+    
+    padding: 6px 0 6px;
+    width: 100%;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 14px;
+    border-bottom: 1px solid var(--admin-input-border);
+}
+.project-head .projectname,.project .projectname{
+    font-size: 1.2em;
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+}
+.project-head .language,.project .language{
+    width: 200px;
+    padding: 6px;
+    word-wrap: break-word;
+}
+.project-head .duration,.project .duration{
+    width: 200px;
+    padding: 6px;
+}
+
+.project{
+    
+    padding: 6px 0 6px;
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 12px; 
+}
+.project .projectname a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 600;
+    cursor: pointer;
     
 }
-.account-detailsdropdown a{
-    text-decoration: none;
-    color: var(--darkblue);
-    cursor: pointer;
-    padding: 3px;
+.project .projectname a:hover{
+    color: var(--admin-input-border);
+    transition: 0.8s;
 }
-.account-detailsdropdown a i{
+.projects-details{
+  
+    margin-top: 12px;
+    padding: 6px;
+}
+.projects-details .projects-title{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--admin-input-border);
+}
+.projects-details .projects-title i{
     font-size: 1.2em;
     margin: 0 12px;
 }
-.account-detailsdropdown a span{
+.projects-details .projects-title label{
+    font-size: 1.1em;
+    margin-right: 12px;
+
+}
+.projects-details .projects-title h1{
     font-size: 1.0em;
 }
-.cardbox{
-position: relative;
-width: 100%;
-height: 100%;
-padding: 10px;
-display: flex;
-justify-content: space-around;
 
-}
-.cardbox .card{
-  position: relative;
-  width: 200px;
-  background: var(--pink2);
-  padding:10px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-  box-shadow: 0 4px 25px rgb(0,0,0,0.08);
-  margin-top: 10px;
-}
-.cardbox .card:hover{
-  background: var(--white);
-  transition: 0.7s;
-}
-
-.cardbox .card .numbers{
-  position: relative;
-  font-weight: 700;
-  font-size: 1.7em;
-  color: var(--black);
-  text-align: left;
-}
-.cardbox .card:hover .numbers{
-  color: var(--admin-icons);
-}
-.cardbox .card .card-name{
-  color: var(--black);
-  font-size: 0.8em;
-  margin-top: 2px;
-  text-align: left;
-  text-transform: capitalize;
-}
-.cardbox .card:hover .card-name{
-  color: var(--admin-icons);
-}
-.cardbox .card .icon{
-  font-size: 2.0em;
-  color:var(--black);
-}
-.cardbox .card:hover .icon{
-  color: var(--admin-icons);
-}
-.article-post-form{
-    
+.projects-details-body{
+    display: flex;
+    padding: 6px;
     width: 100%;
     height: 100%;
-    padding: 6px;
-    position: relative;
-    margin: 24px 0;
 }
-.article-post-form form{
-    
-    width: 800px;
-    margin: 0 auto;
-    height: 100%;
-}
-.article-post-form .input-group input,.article-post-form .input-group textarea{
-    border: 2px solid var(--admin-input-border) !important;
-    color: var(--admin-input-border);
-}
-.article-post-form .buttons{
-    display: flex;
-    justify-content: space-between;
-    
-    padding: 3px 0;
-}
-.article-post-form .buttons .comments{
-    display: flex;
-    justify-content: start;
-    
+.projects-headings{
     width: 200px;
-    padding: 3px;
+    min-height: 500px;
+    border-right:1px solid var(--admin-input-border);
 }
-.article-post-form .buttons .comments input{
+.projects-headings ul{
+    display: block;
+}
+.projects-headings ul li{
+    list-style: none;
     padding: 6px;
-   margin: 0 12px;
-}
-.article-post-form .buttons .comments label{
-    text-transform: capitalize !important;
-    font-size: 0.75em !important;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    text-align: right;
     color: var(--admin-input-border);
 }
-.article-post-form .buttons .button{
-    width: 100px;
+.projects-details-body .details{
+  
+    width: calc(100% - 400px);
+    padding: 0 6px;
+    min-height: 500px;
+    overflow-y: scroll;
 }
-.article-post-form .buttons .button button{
-    width: 100%;
-    height: 100%;
-    padding: 3px;
-    background: var(--admin-input-border);
-    outline: none;
-    border: none;
-    cursor: pointer;
+.details h2{
     text-transform: uppercase;
-    border-radius: 5px;
-}
-.article-post-form .buttons .button button:hover{
-    background: #BEA47F;
-    transition: 0.7s;
-}
-
-.blog-highliths{
-    display: flex;
-    width: 100%;
-    height: 100%;
-   
-    padding: 6px;
-    margin: 24px 0;
-}
-.highliths{
-   
-    width: 600px;
-    height: 100%;
-    padding: 6px;
-    margin: 0 6px;
-    display: block;
-    background: var(--pink2);
-}
-.highliths-header{
-    padding: 3px;
-    width: 100%;
-    height: 100%;
-    display: block;
-    border-bottom: 2px solid var(--admin-input-border);
-}
-.head{
-    text-transform: uppercase;
-    font-size: 0.6em;
-}
-.tail{
+    text-align: left;
     font-size: 0.8em;
-    text-transform: lowercase;
-    font-weight: 600;
+    margin-bottom: 12px;
 }
-.highliths-left{
-    display: flex;
-   
-    margin: 4px 0;
-    padding: 4px;
+.details div{
+    margin-bottom: 12px;
 }
-.left{
-   
-    width: 100%;
-    margin: 0 4px;
-    height: 100%;
-    border-right: 1px solid var(--admin-input-border);
-    display: block;
-}
-.highliths-title{
-    text-transform: uppercase;
-    font-size: 0.59em;
-    font-weight: 900;
-    margin-bottom: 4px;
-}
-.left-head{
-    display: flex;
-    margin: 4px 0 10px;
-}
-.left-head p{
-    margin: 0 2px;
-    font-size: 0.8em;
-    padding: 4px;
-}
-.highliths-paragraph{
-    font-size: 0.9em;
-}
-.right{
-   
-    width: 100%;
-    margin: 0 4px;
-    display: block;
-    height: 100%;
-}
-.top,.bottom{
-   
-    display: block;
-    margin: 2px 0;
-
-}
-.top{
-    border-bottom: 2px solid var(--admin-input-border);
-}
-.top-text,.bottom-text{
-    display: flex;
-    text-transform: capitalize;
-    font-weight: 600;
-    justify-content: space-between;
-    margin-bottom: 8px;
-    font-size: 0.8em;
-}
-.highlits-right{
-    
-    height: 100%;
-    padding: 6px;
-    margin: 0 auto;
-    width: 400px;
-}
-.card-highlight{
-    text-transform: uppercase;
-    display: block;
-    width: 100%;
-    margin: 24px 5px 0;
-    font-size: 1.0em;
-}
-.card-highlight .numbers{
-    font-weight: 700;
-    font-size: 0.8em;
-}
-.right-head{
-    font-size: 1.0em;
-    text-align: center;
-    text-transform: uppercase;
-}
-.blog-lists{
-   
-    width: 100%;
-    padding: 6px;
-    display: block;
-    position: relative;
-    margin: 24px 0;
-}
-.list-header{
-    text-transform: uppercase;
-    font-size: 0.65em;
-    margin-bottom: 5px ;
-    width: 100%;
-}
-.blog-lists form{
-   
-    padding: 6px;
-    display: block;
-    background: var(--pink2);
-}
-table{
-    width: 100%;
-    border-collapse: collapse;
-    margin: 12px;
-    padding: 10px;
-    margin-bottom: 5px;
-  }
-table thead td{
-    font-weight: 600;
-    text-transform: capitalize;
-    padding: 10px;
-}
-table tbody td{
-    margin-top: 10px;
-    padding: 10px;
-}
-.action-button{
-    display: flex;
-    justify-content: center;
-    padding: 4px;
-    width: 60px;
-    height: 100%;
-}
-.action-button button{
-    margin: 0 6px;
-    text-transform: uppercase;
-    background: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    color: var(--admin-icons);
-}
-.action-button button:hover{
-    color: var(--black);
-    transition: 0.6s;
-}
-.action-bar{
-    display: flex;
-    padding: 6px;
-    text-align: right;
-    width: 100%;
-    margin-bottom: 24px;
-    border-bottom:1px solid var(--admin-input-border) ;
-}
-
-.status{
-    width: 700px;
-    margin-left: auto;
-}
-
-
-
-
-
-
-
 
 
 /*Responsivness*/
@@ -1257,7 +1010,7 @@ table tbody td{
     .logo{
         width: 100px;
     }
-    .navbar-toggler{
+    .header .navbar-toggler{
         display: block;
     }
     .navbar{
@@ -1303,10 +1056,14 @@ table tbody td{
     }
     .about .title .title-text{
         width: 60%;
+        font-size: 12px;
+        padding: 6px;
     }
     .about-image{
-        width: 50%;
+        width: 100%;
+        height: 300px;
     }
+  
     .about-text .hi{
         font-size: 0.75em;
     }
@@ -1403,11 +1160,13 @@ table tbody td{
     .search-bar{
         width: 100%;
     }
-    .admin-login{
+    .projects{
         width: 100%;
     }
-    .admin-login-sidebar{
-        width: 30px;
+    .projects-headings{
+        display: none;
     }
- 
+    .projects-details-body .details{
+        width: 100%;
+    }
 }

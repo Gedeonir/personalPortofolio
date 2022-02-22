@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Admin portal</title>
 	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="css/styleadmin.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
 <body>
@@ -13,6 +14,11 @@
 			<ul>
 				<li>
 					<a href="#">
+						<span class="icon"> 
+							<div>
+								<img src="../images/Logo.png" alt="Logo">
+							</div>
+						</span>
 						<span class="title">admin portal</span>
 					</a>
 				</li>
@@ -35,7 +41,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="index.html">
+					<a href="settings.html">
 						<span class="icon"><i class="bi bi-gear"></i></span>
 						<span class="title">Settings</span>
 					</a>
@@ -44,16 +50,16 @@
 		</div>
 		<div class="admin-body-contents">
 			<div class="topbar">
-				 <button class="navbar-toggler" type="button">
-                 	<span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
-            	</button>
+				<button class="navbar-toggler" type="button">
+					<span class="navbar-toggler-icon">
+						<i class="bi bi-list menu"></i>
+						<i class="bi bi-x-lg close"></i>
+					</span>
+				</button>
 			    <div class="user">
-			    	<div class="account-detailsdropdown">
-                    	<a href=""><i class="bi bi-person"></i><span>Username</span></a>
-                    
-                	</div>
-			      <a href=""><i class="bi bi-bell"></i></a>
-			      <a href=""><i class="bi bi-box-arrow-in-left"></i></a>    
+					<a href=""><i class="bi bi-person"></i></a>     		    	
+					<a href=""><i class="bi bi-bell"></i></a>
+					<a href=""><i class="bi bi-box-arrow-in-left"></i></a>    
 				</div>
   			</div>
   			<div class="cardbox">
@@ -69,12 +75,12 @@
 			            <div class="numbers">1000 </div>
 			            <div class="card-name">interactions</div>
 		          </div>
-		          <div class="icon"><i class="bi bi-book"></i></div>
+		          <div class="icon"><i class="bi bi-intersect"></i></div>
 		        </div>
 		        <div class="card">
 		          <div>
 			            <div class="numbers">1000+</div>
-			            <div class="card-name">Blogs</div>
+			            <div class="card-name">Articles</div>
 		          </div>
 		          <div class="icon"><i class="bi bi-chat-square"></i></div>
 		        </div>
@@ -83,12 +89,12 @@
 			            <div class="numbers">10</div>
 			            <div class="card-name">appointments sent</div>
 		          </div>
-		          <div class="icon"><i class="bi bi-ticket-perforated"></i></i></div>
+		          <div class="icon"><i class="bi bi-envelope-plus"></i></div>
 		        </div>
       		</div>
 
       		<div class="article-post-form">
-      			<form action="#" method="post">
+      			<form action="#" method="post" class="postarticleform">
       				<div class="input-group">
       					<input type="text" name="title" placeholder="Article title" required>
       				</div>
@@ -116,7 +122,7 @@
       				<div class="highliths-left">
       					<div class="left">
       						<div class="highliths-title">
-      							<h3>Blog highliths</h3>
+      							<h3>Article highliths</h3>
       						</div>
       						<div class="left-head">
       							<div class="head"><h2>Top blog</h2></div>
@@ -158,17 +164,19 @@
       				<div class="right-head"><h4>feb 2022 Summary</h4></div>
       				<div class="cardbox">
       					<div class="card-highlight">
-				            <div class="numbers">Blogs</div>
-				            <div class="card-name">6</div>
+				            
 				            <div class="numbers">Profile visits</div>
 				            <div class="card-name">14</div>
+							<div class="numbers">new users</div>
+				            <div class="card-name">5</div>
 
 		        		</div>
 		        		<div class="card-highlight">
-				            <div class="numbers">Blog Impressions</div>
+							<div class="numbers">Articles</div>
+				            <div class="card-name">6</div>
+				            <div class="numbers">Articles Impressions</div>
 				            <div class="card-name">500</div>
-				            <div class="numbers">new users</div>
-				            <div class="card-name">5</div>
+				            
 
 		        		</div>
 
@@ -185,7 +193,7 @@
       				<div class="highliths-left">
       					<div class="left">
       						<div class="highliths-title">
-      							<h3>Blog highliths</h3>
+      							<h3>Articles highliths</h3>
       						</div>
       						<div class="left-head">
       							<div class="head"><h2>Top blog</h2></div>
@@ -226,18 +234,20 @@
       			<div class="highlits-right">
       				<div class="right-head"><h4>jan 2022 Summary</h4></div>
       				<div class="cardbox">
-      					<div class="card-highlight">
-				            <div class="numbers">Blogs</div>
-				            <div class="card-name">6</div>
+						<div class="card-highlight">
+				            
 				            <div class="numbers">Profile visits</div>
 				            <div class="card-name">14</div>
+							<div class="numbers">new users</div>
+				            <div class="card-name">5</div>
 
 		        		</div>
 		        		<div class="card-highlight">
-				            <div class="numbers">Blog Impressions</div>
+							<div class="numbers">Articles</div>
+				            <div class="card-name">6</div>
+				            <div class="numbers">articles Impressions</div>
 				            <div class="card-name">500</div>
-				            <div class="numbers">new users</div>
-				            <div class="card-name">5</div>
+				            
 
 		        		</div>
 
@@ -246,10 +256,54 @@
       			</div>
 
       		</div>
-      		<div class="footer">
-			    <p>Designed by Gedeon</p>
+			<div class="footer">
+				<p>Designed by Gedeon</p>
 			</div>
 		</div>
 	</div>
+	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+
+	<script>
+	// firebase.auth().onAuthStateChanged(user => {
+	//   if(!user) {
+	//     window.location = 'login.html'; //If User is not logged in, redirect to login page
+	//   }
+	// });
+
+    const form = document.querySelector(".postarticleform")
+
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDLAvVQHhH77t1exGqXQLH4sefOHXkNqP0",
+    authDomain: "myportofolio-db810.firebaseapp.com",
+    projectId: "myportofolio-db810",
+    storageBucket: "myportofolio-db810.appspot.com",
+    messagingSenderId: "906114197466",
+    appId: "1:906114197466:web:6eda95d8950bd999d482e3"
+  };
+
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+
+  form.addEventListener('submit',(e)=>{
+   	 e.preventDefault()
+	  const database = app.firestore()
+	  database.collection('Articles').add({
+	    article_title:form.title.value,
+	    article_body:form.article.value
+	  })
+	  .then((docRef)=>{
+	    console.log("Article Written with ID:",docRef.id);
+	  })
+	  .catch((error)=>{
+	    console.error("Error adding document:",error);
+	  });
+   })
+</script>
+	<script src="js/burger.js"></script>
 </body>
 </html>

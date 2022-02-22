@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Admin portal</title>
 	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="css/styleadmin.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
 <body>
@@ -13,29 +14,34 @@
 			<ul>
 				<li>
 					<a href="#">
+						<span class="icon"> 
+							<div>
+								<img src="../images/Logo.png" alt="Logo">
+							</div>
+						</span>
 						<span class="title">admin portal</span>
 					</a>
 				</li>
-				<li>
+				<li >
 					<a href="index.html">
 						<span class="icon"><i class="bi bi-house"></i></span>
 						<span class="title">Dashboard</span>
 					</a>
 				</li>
-				<li  class="active">
+				<li class="active">
 					<a href="blogadmin.html">
 						<span class="icon"><i class="bi bi-chat-square"></i></span>
 						<span class="title">blogs</span>
 					</a>
 				</li>
 				<li>
-					<a href="index.html">
+					<a href="messages.html">
 						<span class="icon"><i class="bi bi-envelope"></i></span>
 						<span class="title">Messages</span>
 					</a>
 				</li>
 				<li>
-					<a href="index.html">
+					<a href="settings.html">
 						<span class="icon"><i class="bi bi-gear"></i></span>
 						<span class="title">Settings</span>
 					</a>
@@ -43,102 +49,377 @@
 			</ul>
 		</div>
 		<div class="admin-body-contents">
-			<div class="topbar">
-				 <button class="navbar-toggler" type="button">
-                 	<span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
-            	</button>
+      <div class="topbar">
+				<button class="navbar-toggler" type="button">
+					<span class="navbar-toggler-icon">
+						<i class="bi bi-list menu"></i>
+						<i class="bi bi-x-lg close"></i>
+					</span>
+				</button>
 			    <div class="user">
-			    	<div class="account-detailsdropdown">
-                    	<a href=""><i class="bi bi-person"></i><span>Username</span></a>
-                    
-                	</div>
-			      <a href=""><i class="bi bi-bell"></i></a>
-			      <a href=""><i class="bi bi-box-arrow-in-left"></i></a>    
+					<a href=""><i class="bi bi-person"></i></a>     		    	
+					<a href=""><i class="bi bi-bell"></i></a>
+					<a href=""><i class="bi bi-box-arrow-in-left"></i></a>    
 				</div>
-  			</div>
+  		</div>
+      <div class="search-bar">
+            <form action="#" method="post">
+                <input type="text" name="search" id="search-bar" placeholder="search Article">
+            </form>
+        </div>
 
-            <div class="search-bar">
-                <form action="#" method="post">
-                    <input type="text" name="search" id="search-bar" placeholder="search blog">
-                </form>
+       <div class="adminblog-card">
+          <div class="card-image">
+              <img src="../images/lg-leverage-of-coding.jpg" alt="">
+          </div>
+          <div style="width: 100%;">
+            <div class="action">
+              <i class="bi bi-pencil"></i>
+              <i class="bi bi-trash"></i>
             </div>
+            <div class="card-text">
+              <div class="datetime">
+                  <p>February 3,2022</p>
+                  <p>10min</p>
+              </div>
+              <div class="card-title">
+                  <p>Five reasons why you should attend the workshops</p>
+              </div>
+              <div class="interaction">
+                  <div class="icons">
+                      <label><i>Times liked</i> 20</label>
+                      <label><i>comments</i> 26</label>
+                      <label><i>times shared</i> 100</label>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+              <div class="adminblog-card">
+          <div class="card-image">
+              <img src="../images/lg-leverage-of-coding.jpg" alt="">
+          </div>
+          <div style="width: 100%;">
+            <div class="action">
+              <i class="bi bi-pencil"></i>
+              <i class="bi bi-trash"></i>
+            </div>
+            <div class="card-text">
+              <div class="datetime">
+                  <p>February 3,2022</p>
+                  <p>10min</p>
+              </div>
+              <div class="card-title">
+                  <p>Five reasons why you should attend the workshops</p>
+              </div>
+              <div class="interaction">
+                  <div class="icons">
+                      <label><i>Times liked</i> 20</label>
+                      <label><i>comments</i> 26</label>
+                      <label><i>times shared</i> 100</label>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+              <div class="adminblog-card">
+          <div class="card-image">
+              <img src="../images/lg-leverage-of-coding.jpg" alt="">
+          </div>
+          <div style="width: 100%;">
+            <div class="action">
+              <i class="bi bi-pencil"></i>
+              <i class="bi bi-trash"></i>
+            </div>
+            <div class="card-text">
+              <div class="datetime">
+                  <p>February 3,2022</p>
+                  <p>10min</p>
+              </div>
+              <div class="card-title">
+                  <p>Five reasons why you should attend the workshops</p>
+              </div>
+              <div class="interaction">
+                  <div class="icons">
+                      <label><i>Times liked</i> 20</label>
+                      <label><i>comments</i> 26</label>
+                      <label><i>times shared</i> 100</label>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+              <div class="adminblog-card">
+          <div class="card-image">
+              <img src="../images/lg-leverage-of-coding.jpg" alt="">
+          </div>
+          <div style="width: 100%;">
+            <div class="action">
+              <i class="bi bi-pencil"></i>
+              <i class="bi bi-trash"></i>
+            </div>
+            <div class="card-text">
+              <div class="datetime">
+                  <p>February 3,2022</p>
+                  <p>10min</p>
+              </div>
+              <div class="card-title">
+                  <p>Five reasons why you should attend the workshops</p>
+              </div>
+              <div class="interaction">
+                  <div class="icons">
+                      <label><i>Times liked</i> 20</label>
+                      <label><i>comments</i> 26</label>
+                      <label><i>times shared</i> 100</label>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+              <div class="adminblog-card">
+          <div class="card-image">
+              <img src="../images/lg-leverage-of-coding.jpg" alt="">
+          </div>
+          <div style="width: 100%;">
+            <div class="action">
+              <i class="bi bi-pencil"></i>
+              <i class="bi bi-trash"></i>
+            </div>
+            <div class="card-text">
+              <div class="datetime">
+                  <p>February 3,2022</p>
+                  <p>10min</p>
+              </div>
+              <div class="card-title">
+                  <p>Five reasons why you should attend the workshops</p>
+              </div>
+              <div class="interaction">
+                  <div class="icons">
+                      <label><i>Times liked</i> 20</label>
+                      <label><i>comments</i> 26</label>
+                      <label><i>times shared</i> 100</label>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+              <div class="adminblog-card">
+          <div class="card-image">
+              <img src="../images/lg-leverage-of-coding.jpg" alt="">
+          </div>
+          <div style="width: 100%;">
+            <div class="action">
+              <i class="bi bi-pencil"></i>
+              <i class="bi bi-trash"></i>
+            </div>
+            <div class="card-text">
+              <div class="datetime">
+                  <p>February 3,2022</p>
+                  <p>10min</p>
+              </div>
+              <div class="card-title">
+                  <p>Five reasons why you should attend the workshops</p>
+              </div>
+              <div class="interaction">
+                  <div class="icons">
+                      <label><i>Times liked</i> 20</label>
+                      <label><i>comments</i> 26</label>
+                      <label><i>times shared</i> 100</label>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      		<div class="blog-lists">
-      	
-                <form action="" method="post">
-                   <div class="action-bar">
-                       <div class="action-button"> 
-                            <input type="checkbox" name="selectallblog">
-                            <button type="submit"><i class="bi bi-trash-fill"></i></button>
-                       </div>
-                       <div class="status">
-                            <p>1-50 of 100</p>
-                       </div>
-                   </div> 
-                    <table>
-                        <thead>
-                          <tr>
-                            <td></td>
-                            <td>blogs</td>
-                            <td>impressions</td>
-                            <td>likes</td>
-                            <td>comments</td>
-                            <td>share</td>
-                            <td></td>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td><input type="checkbox" name="selectblog"></td>
-                            <td><a href=""> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a> </td>
-                            <td>10</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>5</td>
-                            <td>Feb 5</td>
-                            <td class="action-button">
-                                <button><i class="bi bi-pencil-square"></i></button>
-                                <button><i class="bi bi-trash-fill"></i></button>
-                            </td>
-            
-                          </tr>
-                          <tr>
-                            <td><input type="checkbox" name="selectblog"></td>
-                            <td><a href=""> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a> </td>
-                            <td>10</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>5</td>
-                            <td>Feb 5</td>
-                            <td class="action-button">
-                                <button><i class="bi bi-pencil-square"></i></button>
-                                <button><i class="bi bi-trash-fill"></i></button>
-                            </td>
-            
-                          </tr>
-                          <tr>
-                            <td><input type="checkbox" name="selectblog"></td>
-                            <td><a href=""> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a> </td>
-                            <td>10</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>5</td>
-                            <td>Feb 5</td>
-                            <td class="action-button">
-                                <button><i class="bi bi-pencil-square"></i></button>
-                                <button><i class="bi bi-trash-fill"></i></button>
-                            </td>
-            
-                          </tr>
-                        </tbody>
-                      </table>
-                </form>      			
-      		</div>
-      		</div>
-      		<div class="footer">
-			    <p>Designed by Gedeon</p>
-			</div>
+  		<!-- <div class="blog-lists">
+        <form action="" method="post">
+          <div class="action-bar">
+            <div class="action-button"> 
+                <input type="checkbox" name="selectallblog">
+                <button type="submit"><i class="bi bi-trash-fill"></i></button>
+            </div>
+            <div class="status">
+              <p>1-50 of 100</p>
+            </div>
+          </div> 
+          <table>
+            <thead>
+              <tr>
+                <td></td>
+                <td>articles</td>
+                <td>impressions</td>
+                <td>likes</td>
+                <td>comments</td>
+                <td>share</td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" name="selectblog"></td>
+                <td><a href=""> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a> </td>
+                <td>10</td>
+                <td>3</td>
+                <td>2</td>
+                <td>5</td>
+                <td class="date">Feb 5</td>
+                <td class="action-button">
+                  <button><i class="bi bi-pencil-square"></i></button>
+                  <button><i class="bi bi-trash-fill"></i></button>
+                </td>
+
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="selectblog"></td>
+                <td><a href=""> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a> </td>
+                <td>10</td>
+                <td>3</td>
+                <td>2</td>
+                <td>5</td>
+                <td class="date">Feb 5</td>
+                <td class="action-button">
+                    <button><i class="bi bi-pencil-square"></i></button>
+                    <button><i class="bi bi-trash-fill"></i></button>
+                </td>
+
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="selectblog"></td>
+                <td><a href=""> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a> </td>
+                <td>10</td>
+                <td>3</td>
+                <td>2</td>
+                <td>5</td>
+                <td class="date">Feb 5</td>
+                <td class="action-button">
+                    <button><i class="bi bi-pencil-square"></i></button>
+                    <button><i class="bi bi-trash-fill"></i></button>
+                </td>
+
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="selectblog"></td>
+                <td><a href=""> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a> </td>
+                <td>10</td>
+                <td>3</td>
+                <td>2</td>
+                <td>5</td>
+                <td class="date">Feb 5</td>
+                <td class="action-button">
+                    <button><i class="bi bi-pencil-square"></i></button>
+                    <button><i class="bi bi-trash-fill"></i></button>
+                </td>
+
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="selectblog"></td>
+                <td><a href=""> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a> </td>
+                <td>10</td>
+                <td>3</td>
+                <td>2</td>
+                <td>5</td>
+                <td class="date">Feb 5</td>
+                <td class="action-button">
+                    <button><i class="bi bi-pencil-square"></i></button>
+                    <button><i class="bi bi-trash-fill"></i></button>
+                </td>
+
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="selectblog"></td>
+                <td><a href=""> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a> </td>
+                <td>10</td>
+                <td>3</td>
+                <td>2</td>
+                <td>5</td>
+                <td class="date">Feb 5</td>
+                <td class="action-button">
+                    <button><i class="bi bi-pencil-square"></i></button>
+                    <button><i class="bi bi-trash-fill"></i></button>
+                </td>
+
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="selectblog"></td>
+                <td><a href=""> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a> </td>
+                <td>10</td>
+                <td>3</td>
+                <td>2</td>
+                <td>5</td>
+                <td class="date">Feb 5</td>
+                <td class="action-button">
+                    <button><i class="bi bi-pencil-square"></i></button>
+                    <button><i class="bi bi-trash-fill"></i></button>
+                </td>
+
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="selectblog"></td>
+                <td><a href=""> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a> </td>
+                <td>10</td>
+                <td>3</td>
+                <td>2</td>
+                <td>5</td>
+                <td class="date">Feb 5</td>
+                <td class="action-button">
+                    <button><i class="bi bi-pencil-square"></i></button>
+                    <button><i class="bi bi-trash-fill"></i></button>
+                </td>
+
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="selectblog"></td>
+                <td><a href=""> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a> </td>
+                <td>10</td>
+                <td>3</td>
+                <td>2</td>
+                <td>5</td>
+                <td class="date">Feb 5</td>
+                <td class="action-button">
+                    <button><i class="bi bi-pencil-square"></i></button>
+                    <button><i class="bi bi-trash-fill"></i></button>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+        </form>      			
+      </div>
+      <div class="footer">
+				<p>Designed by Gedeon</p>
+			</div> -->
 		</div>
 	</div>
+  <script>
+  // firebase.auth().onAuthStateChanged(user => {
+  //   if(!user) {
+  //     window.location = 'login.html'; //If User is not logged in, redirect to login page
+  //   }
+  // });
+
+    const form = document.querySelector(".postarticleform")
+
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDLAvVQHhH77t1exGqXQLH4sefOHXkNqP0",
+    authDomain: "myportofolio-db810.firebaseapp.com",
+    projectId: "myportofolio-db810",
+    storageBucket: "myportofolio-db810.appspot.com",
+    messagingSenderId: "906114197466",
+    appId: "1:906114197466:web:6eda95d8950bd999d482e3"
+  };
+
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+  const database = app.firestore()
+
+  database.collection('Articles').get().doc().then((querySnapshot)=>{
+    querySnapshot.forEach((doc) =>{
+      console.log('$')
+    });
+  });
+</script>
+	<script src="js/burger.js"></script>
 </body>
 </html>
