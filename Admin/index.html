@@ -23,25 +23,25 @@
 					</a>
 				</li>
 				<li class="active">
-					<a href="index.html">
+					<a href="" class="home">
 						<span class="icon"><i class="bi bi-house"></i></span>
 						<span class="title">Dashboard</span>
 					</a>
 				</li>
 				<li>
-					<a href="blogadmin.html">
+					<a href="" class="blogs">
 						<span class="icon"><i class="bi bi-chat-square"></i></span>
 						<span class="title">blogs</span>
 					</a>
 				</li>
 				<li>
-					<a href="index.html">
+					<a href="" class="messages">
 						<span class="icon"><i class="bi bi-envelope"></i></span>
 						<span class="title">Messages</span>
 					</a>
 				</li>
 				<li>
-					<a href="settings.html">
+					<a href="" class="settings">
 						<span class="icon"><i class="bi bi-gear"></i></span>
 						<span class="title">Settings</span>
 					</a>
@@ -57,9 +57,9 @@
 					</span>
 				</button>
 			    <div class="user">
-					<a href=""><i class="bi bi-person"></i></a>     		    	
-					<a href=""><i class="bi bi-bell"></i></a>
-					<a href=""><i class="bi bi-box-arrow-in-left"></i></a>    
+					<a href="" class="useremail"></a>     		    	
+					<button><i class="bi bi-bell"></i></button>
+					<button onclick="logout()"><i class="bi bi-box-arrow-in-left"></i></button>   
 				</div>
   			</div>
   			<div class="cardbox">
@@ -93,25 +93,7 @@
 		        </div>
       		</div>
 
-      		<div class="article-post-form">
-      			<form action="#" method="post" class="postarticleform">
-      				<div class="input-group">
-      					<input type="text" name="title" placeholder="Article title" required>
-      				</div>
-      				<div class="input-group">
-	    				<textarea rows="5" name="article"required></textarea>
-    				</div>
-      				<div class="buttons">
-      					<div class="comments">
-                    		<input type="checkbox" name="commentsoff">
-             				<label>Turns off comments</label>
-               		 	</div>
-      					<div class="input-group button">
-                    		<button type="submit" name="send">Post</button>
-               		 	</div>
-      				</div>
-      			</form>
-      		</div>
+      		
 
       		<div class="blog-highliths">
       			<div class="highliths">
@@ -262,18 +244,12 @@
 		</div>
 	</div>
 	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
 
-	<script>
-	// firebase.auth().onAuthStateChanged(user => {
-	//   if(!user) {
-	//     window.location = 'login.html'; //If User is not logged in, redirect to login page
-	//   }
-	// });
-
-    const form = document.querySelector(".postarticleform")
+<script>
+    const form = document.querySelector(".loginform")
 
 
   // Your web app's Firebase configuration
@@ -288,22 +264,10 @@
 
   // Initialize Firebase
   const app = firebase.initializeApp(firebaseConfig);
-
-  form.addEventListener('submit',(e)=>{
-   	 e.preventDefault()
-	  const database = app.firestore()
-	  database.collection('Articles').add({
-	    article_title:form.title.value,
-	    article_body:form.article.value
-	  })
-	  .then((docRef)=>{
-	    console.log("Article Written with ID:",docRef.id);
-	  })
-	  .catch((error)=>{
-	    console.error("Error adding document:",error);
-	  });
-   })
+ 
 </script>
-	<script src="js/burger.js"></script>
+	
+<script src="js/index.js"></script>
+<script src="js/burger.js"></script>
 </body>
 </html>

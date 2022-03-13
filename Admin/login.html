@@ -46,7 +46,7 @@
     		<h1>Admin Login</h1>
     		<form action="" method="post" class="loginform">
                 <div class="input-group error-text">
-                    <p>Invalid Email or password</p>
+                    <p>Please Login First</p>
                 </div>       
                 <div class="input-group">
                         <label for="lastname">Email:</label>
@@ -93,23 +93,12 @@
   // Initialize Firebase
   const app = firebase.initializeApp(firebaseConfig);
 
-  form.addEventListener('submit',(e)=>{
-    e.preventDefault()
-
-    app.auth().signInWithEmailAndPassword(form.email.value,form.password.value)
-    .then((userCredential)=>{
-        window.location= "index.html";
-    })
-    .catch((error)=>{
-        var errorCode = error.code;
-        var errorMessage = error.message;
-    });
-  })
 </script>
 
 
 
 <script src="../js/index.js"></script>
 <script src="js/pass_hide_and_show.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin portal</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="css/styleadmin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+	<div class="admin-body">
+		<div class="sidebar">
+			<ul>
+				<li>
+					<a href="#">
+						<span class="icon"> 
+							<div>
+								<img src="../images/Logo.png" alt="Logo">
+							</div>
+						</span>
+						<span class="title">admin portal</span>
+					</a>
+				</li>
+				<li>
+					<a href="index.html">
+						<span class="icon"><i class="bi bi-house"></i></span>
+						<span class="title">Dashboard</span>
+					</a>
+				</li>
+				<li>
+					<a href="blogadmin.html">
+						<span class="icon"><i class="bi bi-chat-square"></i></span>
+						<span class="title">blogs</span>
+					</a>
+				</li>
+				<li  class="active">
+					<a href="messages.html">
+						<span class="icon"><i class="bi bi-envelope"></i></span>
+						<span class="title">Messages</span>
+					</a>
+				</li>
+				<li>
+					<a href="settings.html">
+						<span class="icon"><i class="bi bi-gear"></i></span>
+						<span class="title">Settings</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="admin-body-contents">
+			<div class="topbar">
+				<button class="navbar-toggler" type="button">
+					<span class="navbar-toggler-icon">
+						<i class="bi bi-list menu"></i>
+						<i class="bi bi-x-lg close"></i>
+					</span>
+				</button>
+			    <div class="user">
+					<a href=""><i class="bi bi-person"></i></a>     		    	
+					<a href=""><i class="bi bi-bell"></i></a>
+					<a href=""><i class="bi bi-box-arrow-in-left"></i></a>    
+				</div>
+  			</div>
+            <div class="messages-section">
+				<div class="message-header">
+					<a href="messages.html" class="back"><i class="bi bi-arrow-left"></i></a>
+					<div class="message-details">
+						<span>Muzafaru</span>
+						<p>example@email.com</p>
+					</div>
+                </div>
+				<div class="message-body">
+					<div class="left-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<span>11:00</span>
+					</div>
+					<div class="rigth-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<span>11:00</span>
+					</div>
+					<div class="left-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<span>11:00</span>
+					</div>
+					<div class="rigth-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<span>11:00</span>
+					</div>
+					<div class="left-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<span>11:00</span>
+					</div>
+					<div class="rigth-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<span>11:00</span>
+					</div>
+				</div>
+				<form action="#" class="typing-area">
+					<input type="text" name="comment" id="" placeholder="Type your message">
+					<button type="submit"><i class="bi bi-send"></i></button>
+					<button type=""><i class="bi bi-paperclip"></i></button>
+				</form>       
+            </div>
+			<div class="footer">
+				<p>Designed by Gedeon</p>
+			</div>
+		</div>
+		
+	</div>
+	<!-- <script src="js/settings.js"></script> -->
+	<script src="js/burger.js"></script>
+</body>
+</html>

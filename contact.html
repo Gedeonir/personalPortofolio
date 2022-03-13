@@ -41,24 +41,25 @@
     <div class="contact-body">
     	<div class="contact-form">
     		<h1>leave us a message</h1>
-    		<form action="#" method="post">
+    		<form action="#" method="post" id="contactform">
+                <p class="error-text"></p>
     			<div class="names">
     				<div class="input-group">
     					<label for="firstname">Firstname:</label>
-    					<input type="text" name="firstname" placeholder="Firstname" required >
+    					<input type="text" name="firstname" placeholder="Firstname" class="firstname" required >
     				</div>
     				<div class="input-group">
     					<label for="lastname">Lastname:</label>
-    					<input type="text" name="lastname" placeholder="Lastname" required >
+    					<input type="text" name="lastname" placeholder="Lastname" class="lastname" required >
     				</div>
     			</div>
     			<div class="input-group">
     				<label for="email">Email:</label>
-    				<input type="email" name="email" placeholder="Email" required>
+    				<input type="email" name="email" placeholder="Email" class="email" required>
     			</div>
     			<div class="input-group">
     				<label for="message">Message:</label>
-    				<textarea rows="5" name="message" placeholder="Message" required>
+    				<textarea  name="message" placeholder="Message" class="message" required>
 					</textarea>
     			</div>
                 <div class="input-group">
@@ -92,6 +93,32 @@
     <div class="footer">
         <p>Designed by Gedeon</p>
     </div>
-<script src="js/index.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+
+    <script>
+    
+    
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+        apiKey: "AIzaSyDLAvVQHhH77t1exGqXQLH4sefOHXkNqP0",
+        authDomain: "myportofolio-db810.firebaseapp.com",
+        databaseURL: "https://myportofolio-db810-default-rtdb.firebaseio.com",
+        projectId: "myportofolio-db810",
+        storageBucket: "myportofolio-db810.appspot.com",
+        messagingSenderId: "906114197466",
+        appId: "1:906114197466:web:6eda95d8950bd999d482e3"
+        };
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+
+        
+    </script>
+    <script src="js/contacts.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

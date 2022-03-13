@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
 <body>
+    <button onclick="Backtop()" id="top" title="back top"><i class="bi bi-arrow-up"></i></button>
     <div class="banner">
         <div class="header">
             <div class="header-graphic">
@@ -95,7 +96,7 @@
     <div class="blog">
         <div class="blog-header">
             <h3>blogs</h3>
-            <a href="">view all</a>
+            <a href="blogs.html">view all</a>
         </div>
         <div class="blog-body">
             <a href="">
@@ -199,6 +200,30 @@
     <div class="footer">
         <p>Designed by Gedeon</p>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+
+	<script>
+    const form = document.querySelector(".postarticleform")
+
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDLAvVQHhH77t1exGqXQLH4sefOHXkNqP0",
+    authDomain: "myportofolio-db810.firebaseapp.com",
+    databaseURL: "https://myportofolio-db810-default-rtdb.firebaseio.com",
+    projectId: "myportofolio-db810",
+    storageBucket: "myportofolio-db810.appspot.com",
+    messagingSenderId: "906114197466",
+    appId: "1:906114197466:web:6eda95d8950bd999d482e3"
+  };
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+</script>
 <script src="js/index.js"></script>
+<script src="js/backtop.js"></script>
 </body>
 </html>

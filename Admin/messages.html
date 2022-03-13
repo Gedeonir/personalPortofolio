@@ -61,56 +61,33 @@
 					<button><i class="bi bi-bell"></i></button>
 					<button onclick="logout()"><i class="bi bi-box-arrow-in-left"></i></button>   
 				</div>
-			</div>
-			<div class="search-bar">
-				<form action="#" method="post">
-					<input type="text" name="search" id="search-bar" placeholder="search Article">
-				</form>
-			</div>
-			<div class="article-post-form">
-				<form action="#" method="post" class="postarticleform">
-					<div class="input-group">
-						<input type="text" name="title" placeholder="Article title" class="articletitle" >
-					</div>
-					<div class="input-group">
-						<input type="file" name="image" id="articleimage">
-					</div>
-					<div class="input-group">
-						<textarea rows="5" name="article" class="article"></textarea>
-					</div>
+  			</div>
+            <div class="messages-section">
+                <div class="search-bar">
+                    <form action="#" method="post">
+                        <input type="text" name="search" id="search-bar" placeholder="search messages">
+                        <button type="submit"><i class="bi bi-search"></i></button>
+                    </form>
+                </div>
+				
+                <div class="message-list">
+                  
 					
-
-					<div class="buttons">
-						<div class="input-group savebutton">
-							<button type="submit" name="send" onclick="savearticle()">Post</button>
-						</div>
-					</div>
-					<div class="input-group">
-						<input type="hidden" value="" class="date">
-						<input type="hidden" value="" class="time">
-					</div>
-				</form>
-				<div class="single-blog">
-
-				</div>
-				
-			</div>
-			<div class="blogs-content">
-				
-			</div>
+                </div>
+            </div>
 			<div class="footer">
 				<p>Designed by Gedeon</p>
 			</div>
 		</div>
 	</div>
-  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
 
 	<script>
-   
+    const form = document.querySelector(".postarticleform")
 
 
   // Your web app's Firebase configuration
@@ -126,7 +103,8 @@
   // Initialize Firebase
   const app = firebase.initializeApp(firebaseConfig);
 </script>
-<script src="js/blogs.js"></script>
-<script src="js/burger.js"></script>
+	<!-- <script src="js/settings.js"></script> -->
+	<script src="js/burger.js"></script>
+	<script src="js/messages.js"></script>
 </body>
 </html>

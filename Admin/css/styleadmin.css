@@ -1,0 +1,1198 @@
+:root{
+    --sidebar-color: #FBEFDF;
+    --white: #ffffff;
+    --white2:#F5F0EA;
+    --black: #000000;
+    --pink2:#FFFDFB;
+    --admin-icons: #AB916C;
+    --chocolate:#AB916C;
+    --admin-input-border: #AB916C;
+    --banner-texts:#E57914;
+    --error: red;
+
+}
+
+/*Admin pages css*/
+.admin-login{
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    height: 400px;
+    margin: 100px auto;
+}
+.admin-login-sidebar{
+    background-color: #000000;
+    width: 250px;
+    height: 100%;
+}
+.adminlogin-form{
+    display: block;
+    width: 100%;
+    padding: 6px;
+    border: 2px solid var(--admin-input-border);
+    border-left:none ;
+    height: 100%;
+}
+.adminlogin-form form{
+    width: 100%;
+}
+.input-group i{
+    color: var(--admin-icons);
+    cursor: pointer;
+    width: 20px;
+    text-align: center;
+    margin-left: auto;
+    position: relative;
+    top: -30px;
+    margin-right: 12px;
+}
+.input-group i.active::before{
+    color: var(--black);
+    font-weight: 700;
+    transition: 0.8s;
+}
+.error-text{
+    text-align: center;
+    background: var(--sidebar-color);
+    color: var(--error);
+    border-radius: 10px;
+    font-size: 12px;
+    display: none;
+}
+.admin-body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.admin-body input{
+    border: 1px solid var(--admin-input-border) !important;
+}
+.sidebar{
+  position: fixed;
+  width: 55px;
+  height: 100%;
+  background:var(--sidebar-color) ;
+  border-left:10px solid var(--sidebar-color) ;
+  transition: 0.5s;
+  overflow: hidden;
+  left: 0;
+}
+.sidebar.active{
+    width: 300px;
+    transition: 0.5s;
+  }
+
+.sidebar ul{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.sidebar ul li{
+  position: relative;
+  list-style: none;
+  border-bottom-left-radius: 60px;
+  border-top-left-radius: 60px;
+  text-transform: uppercase;
+  padding-left: 6px;
+  margin-bottom: 12px;
+}
+.sidebar ul li.active{
+    background: var(--white);
+}
+.sidebar ul li:hover{
+  background: var(--white);
+}
+.sidebar ul li:hover:nth-child(1){
+    background: transparent;
+}
+.sidebar ul li a{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--black);
+}
+.sidebar ul li :hover a{
+  color: var(--black);
+}
+.sidebar ul li a .icon{
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin-right: 10px;
+  text-align: center;
+}
+.sidebar ul li a .icon i{
+  font-size: 1.75em;
+}
+.sidebar ul li a .icon img{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-top: 12px;
+}
+.sidebar ul li a .title{
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+  width: 100%;
+
+}
+.admin-body-contents{
+  position: absolute;
+  width: calc(100% - 60px);
+  left: 60px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: 0.5s;
+  display: block;
+}
+.admin-body-contents.active{
+    width: calc(100% - 300px);
+    left: 300px;
+}
+.topbar{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 6px;
+    background: var(--black2);
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--admin-icons);
+}
+.topbar .navbar-toggler{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.admin-body-contents.active  .navbar-toggler .menu{
+    display: none;
+}
+.topbar .navbar-toggler .close{
+    display: none;
+}
+.admin-body-contents.active .navbar-toggler .close{
+    display: block;
+}
+.topbar .navbar-toggler{
+    height: 20px;
+}
+.topbar .navbar-toggler i{
+      color: var(--black);
+      font-size: 1.85em;
+  }
+
+.user{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    margin-right: 22px;
+   
+}
+.user button,.user a{
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--admin-icons);
+    padding: 2px;
+    width: 50px;
+    background:transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+.user a{
+    width: 100%!important;
+    font-size: 12px !important;
+    background: var(--white2);
+    border-radius: 20px;
+    height: 20px;
+    margin: auto;
+    border: 1px solid var(--white2);
+
+}
+.user button:hover,.user a:hover{
+    color: var(--black);
+    transition: 0.6s;
+    background: transparent;
+}
+.user button i, .user a{
+    font-size: 1.3em;
+}
+
+.cardbox{
+position: relative;
+width: 100%;
+height: 100%;
+padding: 10px;
+display: flex;
+justify-content: space-around;
+
+}
+.cardbox .card{
+  position: relative;
+  width: 200px;
+  background: var(--pink2);
+  padding:10px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 4px 25px rgb(0,0,0,0.08);
+  margin-top: 10px;
+}
+.cardbox .card:hover{
+  background: var(--white);
+  transition: 0.7s;
+}
+
+.cardbox .card .numbers{
+  position: relative;
+  font-weight: 700;
+  font-size: 1.7em;
+  color: var(--black);
+  text-align: left;
+}
+.cardbox .card:hover .numbers{
+  color: var(--admin-icons);
+}
+.cardbox .card .card-name{
+  color: var(--black);
+  font-size: 0.8em;
+  margin-top: 2px;
+  text-align: left;
+  text-transform: capitalize;
+}
+.cardbox .card:hover .card-name{
+  color: var(--admin-icons);
+}
+.cardbox .card .icon{
+  font-size: 2.0em;
+  color:var(--black);
+}
+.cardbox .card:hover .icon{
+  color: var(--admin-icons);
+}
+.article-post-form{
+    
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+    position: relative;
+    margin: 24px 0;
+}
+.article-post-form form{
+    display: block;
+    width: 800px;
+    margin: 0 auto;
+    height: 100%;
+}
+.article-post-form .input-group input,.article-post-form .input-group textarea{
+    border: 2px solid var(--admin-input-border) !important;
+    color: var(--admin-input-border);
+}
+.article-post-form .buttons,.updatearticleform .button{
+    padding: 3px 0;
+    width: 150px;
+}
+
+
+.article-post-form .buttons .button{
+    width: 500px;
+
+}
+.article-post-form .buttons button,.updatearticleform .button button{
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+    background: var(--admin-input-border);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: var(--white);
+}
+.article-post-form .buttons .button button:hover{
+    background: #BEA47F;
+    transition: 0.7s;
+}
+
+.single-blog {
+    display: none;
+    margin: 0 auto;
+    width: 900px; 
+    height: 600px;
+    padding: 6px;
+    overflow-y: scroll; 
+    background: var(--sidebar-color);  
+}
+.singleBlogCard {
+    width: 100%;
+    height: 100%;
+}
+.single-blog .card-image{
+    width:100%;
+    height: 300px;
+}
+.single-blog .card-text{
+    margin-top: 12px;
+}
+.single-blog .card-text .card-title{
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.single-blog .datetime{
+    margin-top: 12px;
+}
+
+.updatearticleform{
+    width: 100%;
+    
+}
+
+.blog-highliths{
+    display: flex;
+    width: 100%;
+    height: 100%;
+   
+    padding: 6px;
+    margin: 24px 0;
+}
+.highliths{
+   
+    width: 600px;
+    height: 100%;
+    padding: 6px;
+    margin: 0 6px;
+    display: block;
+    background: var(--pink2);
+}
+.highliths-header{
+    padding: 3px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-bottom: 2px solid var(--admin-input-border);
+}
+.head{
+    text-transform: uppercase;
+    font-size: 0.6em;
+}
+.tail{
+    font-size: 0.8em;
+    text-transform: lowercase;
+    font-weight: 600;
+}
+.highliths-left{
+    display: flex;
+   width: 100%;
+    margin: 4px 0;
+    padding: 4px;
+}
+.left{
+   
+    width: 100%;
+    margin: 0 4px;
+    height: 100%;
+    border-right: 1px solid var(--admin-input-border);
+    display: block;
+}
+.highliths-title{
+    text-transform: uppercase;
+    font-size: 0.59em;
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+.left-head{
+    display: flex;
+    margin: 4px 0 10px;
+}
+.left-head p{
+    margin: 0 2px;
+    font-size: 0.8em;
+    padding: 4px;
+}
+.highliths-paragraph{
+    font-size: 0.9em;
+}
+.right{
+   
+    width: 100%;
+    margin: 0 4px;
+    display: block;
+    height: 100%;
+}
+.top,.bottom{
+   
+    display: block;
+    margin: 2px 0;
+
+}
+.top{
+    border-bottom: 2px solid var(--admin-input-border);
+}
+.top-text,.bottom-text{
+    display: flex;
+    text-transform: capitalize;
+    font-weight: 600;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.8em;
+}
+.highlits-right{
+    
+    height: 100%;
+    padding: 6px;
+    margin: 0 auto;
+    width: 400px;
+}
+.card-highlight{
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    margin: 24px 5px 0;
+    font-size: 1.0em;
+}
+.card-highlight .numbers{
+    font-weight: 700;
+    font-size: 0.8em;
+}
+.right-head{
+    font-size: 1.0em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*admin blog page*/
+.blogs-content{
+    display: grid; 
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-gap: 1.5rem;
+    
+}
+.adminblog-card{
+    display: block;
+    height: 100%;
+    box-shadow: 0 4px 25px rgb(0,0,0,0.08);
+    padding: 6px;
+    background: var(--sidebar-color);
+    
+}
+.adminblog-card .card-image{
+    width: 100%;
+    height: 200px;
+}
+.adminblog-card .card-image img{
+    width: 100%;
+    height: 100%;
+}
+.adminblog-card .action{
+    display:flex;
+    font-size: 0.8em;
+    margin-top: 4px;
+    color: var(--admin-icons);
+    width: 100%;
+    height: 100%;   
+    margin: auto;
+}
+.adminblog-card .action button{
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    text-transform: uppercase;
+    justify-content: space-around;
+   
+    margin: 0 24px;
+
+}
+.adminblog-card .action button.delete{
+    color: var(--error);
+}
+.adminblog-card .action button.edit{
+    color: green;
+}
+.adminblog-card .action button:hover{
+    transition: 0.8s;
+    color: var(--black);
+}
+.adminblog-card .card-text{
+    width: 100%;
+    height: 100%;
+   margin-top: 12px;
+     
+}
+.adminblog-card .card-text .datetime{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.65em!important;
+    width: 100%;
+}
+.adminblog-card .card-title{
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin: 12px auto;
+}
+.adminblog-card .interaction{
+    display: block;
+    width: 100%;
+    
+}
+.adminblog-card .interaction .icons label{
+    width: 100px;
+    font-size: 0.75em;
+    margin: 0 6px;
+
+}
+.adminblog-card .interaction .icons label i{
+    text-transform: uppercase;
+}
+
+
+/* Settings CSS */
+.settings{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.settings-lists{
+    width: 100%;
+    height: 100%;
+}
+.settings-lists ul{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+}
+.settings-lists ul li{
+    display: block;
+    width: 100%;
+    padding: 3px;
+    
+}
+.settings-lists ul li button{
+    padding: 6px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    background: transparent;
+    text-transform: uppercase;
+    outline: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--black);
+    border: none;
+    border-bottom: 1px solid var(--sidebar-color);
+}
+.settings-lists ul li button:hover{
+    font-weight: 700;
+}
+.settings-lists ul li button.notactive{
+    border:none;
+}
+.personal-settings-details{
+    display: none;
+    
+}
+.personal-settings-details.active{
+    display: flex;
+    justify-content: space-around;
+    padding: 6px;
+    height: 100%;
+    width: 1000px;
+    margin: 24px auto;
+}
+.profile-photo{
+    width: 300px;
+    height: 300px;
+    margin: 0 24px;
+    display: block;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px;
+}
+.profile-photo .changepicture{
+    display: none;
+   
+}
+.profile-photo:hover .changepicture{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: auto;
+    border-radius: 20px;
+    text-align: center;
+    border:1px solid var(--black);
+    
+}
+.profile-photo:hover .changepicture a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--black);
+    text-align: center;
+    border-radius: 5px;
+    padding: 6px;
+}
+.profile-photo:hover .changepicture a:hover{
+    color: var(--admin-input-border) ;
+    transition: 0.6s;
+    border: none;
+}
+
+.profile-photo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.profile-photo:hover img{
+    display: none;
+}
+.identifications{
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+   
+    display: block;
+}
+.identifications.notActive{
+    display: none;
+}
+.identifications .names , .editform .names{
+    display: flex;
+}
+.identification-item{
+   
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+}
+.identifications a, .skills-settings a ,.about-me a{
+    text-decoration: none;
+    color: var(--admin-icons);
+    cursor: pointer;
+    font-size: 0.8em;
+}
+.identifications  a:hover,.about-me a:hover, .skills-settings a:hover{
+    color: var(--black);
+    transition: 0.7s;
+}
+.identifications label,.skills-settings label,.about-me label,.projects-settings label{
+    font-weight: 600;
+    width: 100%;
+   
+    text-transform: uppercase;
+    font-size: 0.7em;
+    margin-bottom: 12px;
+}
+.identifications p{
+    display: flex;
+    justify-content: space-between;
+}
+.editform{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.editform.active{
+    display: block;
+}
+.editform .input-group button,.identifications .Editbtn, .editform .Editbtn{
+    background: var(--admin-input-border);
+    padding: 5px;
+    text-align: center;
+    width: 60px;
+    color: var(--white);
+    border-radius: 5px;
+    margin-left: auto;
+    font-size: 0.8em;
+}
+.about-me{
+    width: 900px;
+    display: none;
+    margin: 10px auto;
+}
+.about-me.active{
+    display: block;
+}
+.about-text{
+    width: 100%;
+    word-wrap: break-word;
+}
+.skills-settings{
+    width: 900px;
+    height: 100%;
+    display: none;
+    margin: 24px auto;
+}
+.skills-settings.active{
+    display: block;
+}
+.skills-settings
+.identification-item{
+    display: flex;
+    justify-content: space-between;
+
+}
+.skills-settings
+.identification-item p{
+    text-transform: uppercase;
+}
+
+.add-skills{
+    padding: 12px;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.add-skills.active{
+    display: block;
+}
+.add-skills form{
+    display: block;
+}
+.add-skills .input-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-skills .input-group input,select{
+    margin: 0 10px;
+    outline: none;
+    border: 1px solid var(--admin-input-border);
+    background: transparent;
+    padding-left: 12px;
+    cursor: pointer;
+}
+.add-skills .input-group button{
+    text-align: center;
+    width: 150px;
+    background:var(--sidebar-color);
+    border-radius:10px;
+}
+.projects-settings{
+    padding: 6px;
+    height: 100%;
+    width: 900px;
+    margin: 24px auto;
+}
+.projects-settings ul{
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    padding: 6px;
+    width: 100%;
+    height: 100%;
+}
+.projects-settings ul li{
+    width: 100%;
+    padding: 6px;
+    margin-top: 12px;
+    list-style-type: none;
+    text-align: center;
+    background: var(--sidebar-color);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.0em;
+}
+
+.projects-settings ul li a:hover{
+    color: var(--black);
+    transition: 0.2s;
+    font-weight: 600;
+}
+.projects-settings ul li a{
+    padding: 6px;
+    width: 100%;
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--admin-icons);
+}
+.projects-settings ul li i{
+    color: var(--admin-icons);
+}
+.projects-settings ul li i:hover{
+    color: var(--black);
+    transition: 0.8s;
+}
+.Banner-datasettings{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+.Banner-datasettings .contents{
+    width: 100%;
+    display: flex;
+    padding: 6px;
+}
+.Banner-datasettings .Bannerform{
+    width: 100%;
+    padding: 6px;
+}
+
+
+
+/* messages css */
+.messages-section{
+    width: 1000px;
+    height: 100%;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2px;
+    position: relative;
+    
+    
+}
+.message-list{
+    display: block;
+    overflow-y: scroll;
+    width: 100%;
+    height: 500px;
+    
+}
+.message-list::-webkit-scrollbar{
+    width: 0px;
+}
+.message-list a{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 1px 1px var(--admin-icons);
+    text-decoration: none;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding-left: 22px;
+}
+.message-list a:hover{
+    background: var(--white2);
+    transition: 0.8s;
+    box-shadow: 0 1px 1px var(--sidebar-color);
+}
+.message-list a .message-content{
+    display: flex;
+}
+.message-list a .message-content .message-details{
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+}
+.message-details span{
+    font-weight: 700;
+    color: var(--black);
+    font-size: 1.0em;
+}
+.message-details p{
+    margin-top: 6px;
+    color: var(--admin-input-border);
+    font-weight: 600;
+}
+
+.message-list a .status-dot{
+    padding: 4px;
+    text-align: center;
+    color: var(--black);
+    font-size: 10px;
+    margin: 0 24px;
+    display: flex;
+    display: block;
+}
+.message-list a:hover .status-dot{
+    display: none;
+}
+.message-list .action button{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--admin-icons);
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.5em;
+}
+.message-list  .action{
+    display: none;
+}
+.message-list .action button:hover{
+   color: var(--black);
+   transition: 0.8s;
+}
+.message-header{
+    display: flex;
+    padding: 10px;
+    background: var(--sidebar-color);
+    margin: 0 auto 2px;
+}
+.message-header a{
+    text-decoration: none;
+    color: var(--admin-icons);
+    font-size: 1.5em;
+    margin: 0 16px 0 0;
+    cursor: pointer;
+}
+.message-header a:hover{
+    color: var(--black);
+    transition: 0.8s;
+}
+.message-body{
+    width: 100%;
+    height: 500px;
+    margin: 0 0 12px;
+    overflow-y: scroll;
+    padding: 6px;
+    
+}
+.message-body::-webkit-scrollbar{
+    width: 0px;
+}
+.left-body{
+    padding: 6px;
+    margin-right: auto;
+    max-width: calc(100% - 500px);
+    margin-bottom: 12px;
+}
+.rigth-body{
+    padding: 6px;
+    margin-left: auto;
+    max-width: calc(100% - 500px);
+    margin-bottom: 12px;
+}
+.left-body span,.rigth-body span{
+    margin-left: 400px;
+    font-size: 14px;
+    color: var(--admin-icons);
+}
+.left-body p{
+    word-wrap: break-word;
+    font-size: 16px;
+    border-radius: 0px 20px 20px 20px;
+    padding: 10px;
+    background: var(--sidebar-color);
+    
+}
+.rigth-body p{
+    word-wrap: break-word;
+    font-size: 16px;
+    border-radius: 20px 20px 0 20px;
+    padding: 10px;
+    background: var(--sidebar-color);
+    
+}
+.typing-area{
+    display: flex;
+    padding: 12px;
+    width: 100%;
+    justify-content: center;
+    background: var(--sidebar-color);
+    margin-bottom: 100px;
+}
+.typing-area input{
+    padding: 12px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 20px;
+    margin:0 6px;
+}
+.typing-area button{
+    padding: 12px;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--admin-icons);
+    cursor: pointer;
+    font-size: 1.5em;
+    margin: 0 6px;
+}
+.typing-area button:hover{
+    color: var(--black);
+    transition: 0.8s;
+}
+/* Responsivness */
+@media (max-width: 1000px) { 
+    .admin-login{
+        width: 300px;
+    }
+    .admin-login-sidebar{
+        width: 30px;
+    }
+    .sidebar{
+        display: none;
+    }
+    .sidebar.active{
+        display: block;
+        width: 120px;
+    }
+    .sidebar ul li{
+        font-size: 8px;
+        padding-left: 3px;
+    }
+    .sidebar ul li a .icon{
+        width: 30px;
+        height: 30px;
+        text-align: center;
+    }
+    .sidebar ul li a .title{
+        padding: 0 2px;
+      
+    }
+    .admin-body-contents{
+        width: 100% ;
+        left: 0;
+        min-height: 100vh;
+        background: var(--white);
+        transition: 0.5s;
+        
+    }
+    .admin-body-contents.active{
+        width: calc(100% - 120px);
+        left: 120px;
+    }
+    .topbar .navbar-toggler i{
+        font-size: 1.0em;
+    }
+  
+    .user a i{
+        font-size: 1.0em;
+    }
+    .cardbox{
+        display: block;
+    }
+    .cardbox .card{
+        width: 100%;
+    }
+    .article-post-form form{
+        width: 100%;
+    }
+    .blogs-content{
+        display: block;
+    }
+    .adminblog-card{
+        width: 100%;
+        display: block;
+        margin:48px auto;
+       
+    }
+    .adminblog-card .card-image{
+        width: 100%;
+        height: 300px;
+       
+    }
+
+    .adminblog-card .card-text{
+        margin-top: 12px;
+        width: 100%;
+    }
+    .adminblog-card .interaction .icons label{
+        width: 100px;
+        font-size: 0.5em;
+    }
+
+    .highliths{
+        width: 100%;
+    }
+    .blog-highliths{
+        display: block;
+    }
+    .blog-highliths .cardbox{
+        display: flex;
+    }
+    .top-text,.bottom-text{
+        display: block;
+    }
+    .settings-lists ul li button{
+        font-size: 9px;
+        font-weight: 600;
+    }
+    .personal-settings-details.active{
+        display: block;
+        width: 100%;
+        font-size: 10px;
+    }
+
+.skills-settings{
+    font-size: 10px;
+}
+    .profile-photo{
+        margin: auto;
+    }
+    .profile-photo:hover .changepicture{
+        display: none;
+    }
+    .profile-photo:hover img{
+        display: block;
+    }
+   .status{
+       width: 100%;
+   }
+   .messages-section{
+       width: 100%;
+   }
+   .profile-photo{
+       width: 150px;
+       height: 150px;
+   }
+   .about-me{
+        width: 100%;
+    }
+    .skills-settings{
+        width: 100%;
+    }
+    .projects-settings{
+        width: 100%;
+    }
+    .projects-settings ul{
+        display: block;
+    }
+    .projects-settings ul li{
+        font-size: 9px
+    }
+    .left-body,.rigth-body{
+        max-width: calc(100% - 100px);
+    }
+    .left-body span,.rigth-body span{
+        margin-left: 190px;
+    }
+  
+    table thead td{
+        font-size: 8px;
+    
+    }
+    table tbody td{
+        font-size: 9px;
+    }
+}
+
+
+
+
+
