@@ -1,9 +1,9 @@
 
  let blogId = JSON.parse(window.localStorage.getItem('articleId'));
- console.log(blogId);
 
 window.onload=function(){
     this.getBlogData(blogId)
+    this.getcomments(blogId)
 }
 function getBlogData(key){
     let articlepost = document.querySelector('.blog-contents');
@@ -30,10 +30,9 @@ function getBlogData(key){
                                 "<input type='hidden' name='article_id' id='articleid'  value='"+key+"' required>"+
                                 "<input type='text' name='names' id='names' placeholder='Enter name'  required>"+
                                 "<input type='text' name='comment' id='comment' placeholder='comment' required>"+
-                                "<button type='submit' name='post' onclick='sendcomment()'>Send</button>"+
+                                "<button type='submit' name='post' id='"+ key +"' onclick='sendcomment(this.id)'>Send</button>"+
                                 "</form>"+
                                 "</div>"+
-                                "<div class='comments'></div>"+
                             "</div></div>";
     
     })
@@ -44,7 +43,7 @@ function getBlogData(key){
 
 let form = document.querySelector(".commentForm");
 
-function sendcomment(){
+function sendcomment(key){
 
     let name = document.querySelector('#names').value;
     let comment = document.querySelector('#comment').value;
@@ -52,7 +51,7 @@ function sendcomment(){
     let date = new Date();
 
     firebase.database().ref('Comments/').push().set({
-        article:article,
+        article:key,
         comment:comment,
         names:name,
         Date: date
@@ -71,12 +70,15 @@ function sendcomment(){
     window.location = "Readblog.html?article_id="+ article;
 }
 
+let comments = document.querySelector('.comments');
 
-
-function getcomments(){
+function getcomments(key){
+    comments.innerHTML =""
 	firebase.database().ref('Comments/').once('value').then(function(snapshot){
-    let comments = document.querySelector('.comments');
     let posts = snapshot.val();
+    if (!posts) {
+        comments.innerHTML = "No comment yet!";
+    }
 
     for(let[key,value] of Object.entries(posts)){
        comments.innerHTML = "<div class='comment-name'><label>"+ value.names +"</label><p>"+ value.comment+" </p></div>"+comments.innerHTML;

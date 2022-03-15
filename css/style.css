@@ -474,9 +474,7 @@ body{
 }
 .blog-contents{
     width: 90%;
-    margin: auto;
-    
-    margin-top: 12px;
+    margin: 12px auto 0;
     padding: 6px;
 }
 .blogslist{
@@ -516,7 +514,7 @@ body{
     height: 100%;
     padding: 24px;
     box-shadow: 0 4px 25px rgb(0,0,0,0.08);
-    margin: 24px auto;
+    margin:auto;
 }
 .blog-card .card-image{
     width: 90%;
@@ -656,10 +654,30 @@ body{
     display: block;
     width: 100%;
 }
+.comments{
+    margin:0 auto 12px;
+    width: 1000px;
+    padding: 24px;
+    height: 100%;
+}
+.comment-name{
+    display: flex;
+    margin: 12px auto;
+    width: 100%;
+    word-wrap: break-word;
+}
+.comment-name label{
+    font-weight: 700;
+    font-size: 14px;
+    margin-right: 12px;
+}
 .comment label{
     font-size: 0.8em;
     font-weight: 700;
     color: var(--admin-input-border);
+}
+.comment-name p{
+    font-size: 12px;
 }
 .comment p{
     padding-left: 4px;
@@ -1168,7 +1186,7 @@ body{
     .about-text .text {
         font-size: 0.9em;
     }
-    .readBlogcard{
+    .readBlogcard,.comments{
         width: 100%;
     }
     .readBlogcard .interaction{
