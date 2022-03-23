@@ -1,20 +1,41 @@
-let error = document.querySelector(".error-text");
+
+const form = document.querySelector(".loginform")
+const feedbacktext = document.querySelector('.feedback-text');
+
 
 
 form.addEventListener('submit',(e)=>{
   e.preventDefault()
+  let email = document.querySelector('.email').value;
+  let password = document.querySelector('.password').value
 
-  app.auth().signInWithEmailAndPassword(form.email.value,form.password.value)
-  .then(()=>{
-
-    alert("you are logged in as :"+ form.email.value);
-    window.location = "index.html";  
+  fetch('https://myportofoliobrand.herokuapp.com/login',{
+    method:"POST",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+  },
+    body:JSON.stringify(
+      {
+        email: email,
+        password:password
+      }
+    )
+    
   })
-  .catch(()=>{
-    error.style.display="block";
-    error.innerHTML ="Login failed, Invalid email or password";
-  });
+  .then(res => res.json())
+  .then(json =>{
+    if(json.token){
+      alert(json.message)
+   
+      localStorage.setItem("token",JSON.stringify(json.token));
+      window.location.href="index.html?token="+ json.token;
+    }else{
+        feedbacktext.style.color = "red";
+        feedbacktext.innerHTML = json.Error;
+    }
+  })
 })
+
 
 
   

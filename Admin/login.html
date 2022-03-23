@@ -25,7 +25,7 @@
                     <a href="../index.html">Home</a>
                 </li>
                   <li>
-                    <a href="#">projects</a>
+                    <a href="../projects.html">projects</a>
                 </li>
                 <li>
                     <a href="../blogs.html">blog</a>
@@ -33,8 +33,14 @@
                 <li>
                     <a href="../contact.html">contact</a>
                 </li>
-                <li class="active">
-                    <a href="login.html">Login</a>
+                <li>
+                    <a href="../signup.html">signup</a>
+                </li>
+                <li >
+                    <a href="../signin.html">Users login</a>
+                </li>
+                <li  class="active">
+                    <a href="../admin/login.html">admin login</a>
                 </li>
             </ul>
         </div>
@@ -45,16 +51,15 @@
     	<div class="adminlogin-form">
     		<h1>Admin Login</h1>
     		<form action="" method="post" class="loginform">
-                <div class="input-group error-text">
-                    <p>Please Login First</p>
+                <div class="input-group feedback-text">
                 </div>       
                 <div class="input-group">
                         <label for="lastname">Email:</label>
-                        <input type="email" name="email" placeholder="Email" required >
+                        <input type="email" name="email" placeholder="Email" class="email" required >
                     </div>
     			<div class="input-group">
     				<label for="password">password:</label>
-    				<input type="password" name="password" placeholder="Password" required>
+    				<input type="password" name="password" placeholder="Password" class="password" required>
                     <i class="bi bi-eye"></i>
     			</div>
                 <div class="input-group">
@@ -71,33 +76,7 @@
     <div class="footer">
         <p>Designed by Gedeon</p>
     </div>
-<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
-
-<script>
-    const form = document.querySelector(".loginform")
-
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyDLAvVQHhH77t1exGqXQLH4sefOHXkNqP0",
-    authDomain: "myportofolio-db810.firebaseapp.com",
-    projectId: "myportofolio-db810",
-    storageBucket: "myportofolio-db810.appspot.com",
-    messagingSenderId: "906114197466",
-    appId: "1:906114197466:web:6eda95d8950bd999d482e3"
-  };
-
-  // Initialize Firebase
-  const app = firebase.initializeApp(firebaseConfig);
-
-</script>
-
-
-
-<script src="../js/index.js"></script>
+<script src="../js/burger.js"></script>
 <script src="js/pass_hide_and_show.js"></script>
 <script src="js/login.js"></script>
 </body>

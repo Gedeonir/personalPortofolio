@@ -1,90 +1,123 @@
 
- let blogId = JSON.parse(window.localStorage.getItem('articleId'));
+let blogId = JSON.parse(window.localStorage.getItem('articleId'));
+const token = JSON.parse(window.localStorage.getItem('token'));
 
-window.onload=function(){
-    this.getBlogData(blogId)
-    this.getcomments(blogId)
-}
-function getBlogData(key){
+const url = `https://myportofoliobrand.herokuapp.com/blogs/${blogId}`;
+
+fetch(url,{
+    method:"GET"
+})
+.then(res => res.json())
+.then(blogData => {
     let articlepost = document.querySelector('.blog-contents');
-    firebase.database().ref('Articles/'+key).once('value').then(function(snapshot){
-  
-    let posts = snapshot.val();
-    articlepost.innerHTML = "<div class='readBlogcard'><div class='card-image'><img src='"+ posts.image +"' alt=''></div>"+
-                            "<div class='datetime'>"+
-                            "<p>"+posts.Date+"</p>"+
-                            "<p>"+posts.Time+"</p>"+
-                            "</div>"+
-                            "<div class='card-text'>"+
-                            "<div class='card-title'>"+posts.title+"<p></p></div>"+
-                            " <div class='card-details'><p>"+ posts.post +"</p></div>"+
-                            "</div>"+
-                            "<div class='interaction'>"+
-                            "<div class='icons'>"+
-                                "<label><i class='bi bi-heart'></i> 20</label>"+
-                                "<label><i class='bi bi-chat'></i> 26</label>"+
-                                "<label><i class='bi bi-share'></i> 100</label>"+
-                            "</div>"+
-                            "<div class='comment'>"+
-                                "<form action='' method='post' class='commentForm'>"+
-                                "<input type='hidden' name='article_id' id='articleid'  value='"+key+"' required>"+
-                                "<input type='text' name='names' id='names' placeholder='Enter name'  required>"+
-                                "<input type='text' name='comment' id='comment' placeholder='comment' required>"+
-                                "<button type='submit' name='post' id='"+ key +"' onclick='sendcomment(this.id)'>Send</button>"+
-                                "</form>"+
-                                "</div>"+
-                            "</div></div>";
-    
-    })
-     
-}
+
+    if(!token){
+        articlepost.innerHTML = `<div class='readBlogcard'>
+    <div class='datetime'>
+    <p>${blogData.data.time}</p>
+    <p>${blogData.data.status}</p>
+    </div>
+    <div class='card-text'>
+    <div class='card-title'>${blogData.data.title}</div>
+    <div class='card-details'><p>${blogData.data.body}</p></div>
+    <p>author:${blogData.data.author}</p
+    </div>
+    <div class='interaction'>
+    <div class='icons'>
+        <label><i class='bi bi-heart'></i> ${blogData.data.likes}</label>
+        <label><i class='bi bi-chat'></i> ${blogData.data.likes}</label>
+        <label><i class='bi bi-share'></i> 100</label>
+    </div>
+    </div>
+    </div>`
+
+    articlepost.innerHTML+=`<div class='adminblog-card' style='width:700px; height:200px; margin:auto; text-align:center'>
+            <div style="padding:20px">
+                <p>you must login first,to comment</p>
+            </div>  
+        </div>`
+    }
+    else{
+        articlepost.innerHTML=`<div class='readBlogcard'>
+        <div class='datetime'>
+        <p>${blogData.data.time}</p>
+        <p>${blogData.data.status}</p>
+        </div>
+        <div class='card-text'>
+        <div class='card-title'>${blogData.data.title}</div>
+        <div class='card-details'><p>${blogData.data.body}</p></div>
+        <p>author:${blogData.data.author}</p
+        </div>
+        <div class='interaction'>
+        <div class='icons'>
+            <label><i class='bi bi-heart'></i> ${blogData.data.likes}</label>
+            <label><i class='bi bi-chat'></i> ${blogData.data.comments}</label>
+            <label><i class='bi bi-share'></i> 100</label>
+        </div>
+        </div></div>`
+    }
+
+
+})
+
+
 
 //comments
 
-let form = document.querySelector(".commentForm");
+const form = document.querySelector(".commentForm");
 
-function sendcomment(key){
+function sendcomment(){
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault()
 
-    let name = document.querySelector('#names').value;
-    let comment = document.querySelector('#comment').value;
-    let article = document.querySelector('#articleid').value;
-    let date = new Date();
+        const comment = document.querySelector('#comment').value;
+        fetch(`https://myportofoliobrand.herokuapp.com/blogs/${blogId}/sendcomment`,{
+                method:"POST",
+                headers:{
+                    "Content-type": "application/json; charset=UTF-8",
+                    "authorization":`Bearer ${token}`
+                },
+                body:JSON.stringify(
+                    {
+                        comment:comment
+                    }
+                ) 
+                
+        })
+        .then(res => res.json())
+        .then(json => {
+        alert(json.message||json.Error);
+        window.location.href = './Readblog.html?article_id='+blogId;
+        })
+    })
 
-    firebase.database().ref('Comments/').push().set({
-        article:key,
-        comment:comment,
-        names:name,
-        Date: date
-
-    },function(error){
-        if(error){
-            alert("comment not sent");
-        }
-        else{
-            alert("comment sent")
-
-            form.reset();
-            getcomments();
-        }
-    });
-    window.location = "Readblog.html?article_id="+ article;
-}
-
-let comments = document.querySelector('.comments');
-
-function getcomments(key){
-    comments.innerHTML =""
-	firebase.database().ref('Comments/').once('value').then(function(snapshot){
-    let posts = snapshot.val();
-    if (!posts) {
-        comments.innerHTML = "No comment yet!";
-    }
-
-    for(let[key,value] of Object.entries(posts)){
-       comments.innerHTML = "<div class='comment-name'><label>"+ value.names +"</label><p>"+ value.comment+" </p></div>"+comments.innerHTML;
-    }
-	})
 }
 
 
+    const commentsArea = document.querySelector('.comments');
+
+
+    fetch(`https://myportofoliobrand.herokuapp.com/blogs/${blogId}/comments`,{
+        method:"GET"
+    })
+    .then(res => res.json())
+    .then(blogData => getBlogComments(blogData))
+
+
+const getBlogComments = (comments)=>{
+    Object.values(comments).forEach(element => {
+        const comments = element.comments
+        if (element.commentsCount == 0) {
+            commentsArea.innerHTML ='No comments yet!'
+        } else {
+           commentsArea.innerHTML =`${element.commentsCount} comment(s)` 
+
+           Array.from(comments).forEach(comment=>{
+            commentsArea.innerHTML += `<div class='comment-name'><label>${comment.names}(${comment.email})</label><br><p>${comment.comment}</p></div>`;
+        })
+        }
+        
+       
+    })
+}
 

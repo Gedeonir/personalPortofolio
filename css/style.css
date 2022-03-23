@@ -71,7 +71,7 @@ body{
 .header-graphic{
     display: flex; 
     justify-content: space-between; 
-    width: 100%;
+    width: 200px;
 }
 .header.active{
     width: 100%;
@@ -92,7 +92,7 @@ body{
 
 .navbar{
     width: 100%;
-    padding: 12px;
+    padding: 6px;
     height: 100%;
 }
 .navbar.active{
@@ -107,12 +107,12 @@ body{
     display: block;
 }
 .navbar ul li{
-    font-size: 1.0em;
+    font-size: 0.8em;
     list-style-type: none;
     cursor: pointer;
     text-align: center;
     margin: 0 12px;
-    width: 100%;
+
 
 }
 .navbar ul li.active{
@@ -504,7 +504,7 @@ body{
 }
 .blog-card{
     display: block;
-    height: 400px;
+    height: 230px;
     margin:5px auto;
     
 }
@@ -649,10 +649,10 @@ body{
     padding: 12px;
 }
 .comment{
-    margin-top: 6px;
-    padding: 6px;
+    margin: 6px auto;
+    padding: 6px 22px;
     display: block;
-    width: 100%;
+    width: 1000px;
 }
 .comments{
     margin:0 auto 12px;
@@ -668,8 +668,9 @@ body{
 }
 .comment-name label{
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
     margin-right: 12px;
+    color: var(--admin-input-border);
 }
 .comment label{
     font-size: 0.8em;
@@ -721,7 +722,7 @@ body{
     padding: 5px;
     box-shadow: -5px 5px  5px grey;
 }
-.newsletter form{
+.newsletter form,.commentForm{
     margin-top: 12px;
     padding: 5px;
     width: 100%;
@@ -729,7 +730,7 @@ body{
     display: flex;
     justify-content: space-between;
 }
-.newsletter form input{
+.newsletter form input,.commentForm input{
     width: 100%;
     padding: 12px;
     border: 1px solid var(--chocolate);
@@ -737,7 +738,7 @@ body{
     border-radius: 5px;
     outline: none;
 }
-.newsletter form button{
+.newsletter form button,.commentForm button{
     width: 200px;
     text-transform: uppercase;
     background-color: var(--chocolate);
@@ -784,7 +785,7 @@ body{
 }
 /*Contact page css*/
 
-.contact-body{
+.contact-body,.signup-body{
     margin: 24px auto;
     width: 900px;
     height: 100%;
@@ -793,16 +794,16 @@ body{
     justify-content: space-between;
 }
 
-.contact-form{
+.contact-form,.signup-form{
     display: block;
     border: 2px solid var(--chocolate);
-    border-radius: 20px;
+    border-radius: 5px;
     width: 100%;
     padding: 12px;
     height: 100%;
     margin: 0 12px;
 }
-.contact-form h1,.adminlogin-form h1{
+.contact-form h1,.adminlogin-form h1,.signup-form h1{
     width: 100%;
     text-transform: uppercase;
     font-size: 1.0em;
@@ -810,23 +811,22 @@ body{
     text-align: center;
     margin-bottom: 18px;
 }
-.contact-form form{
+.contact-form form,.signup-form form{
     display: block;
     width: 100%;
     height: 100%;
     padding: 6px;
 
 }
-.error-text{
+.feedback-text{
     text-align: center;
-    background: var(--sidebar-color);
-    color: var(--error);
-    border-radius: 10px;
+    border-radius: 2px;
     font-size: 14px;
-    padding: 6px;
+    padding: 2px;
     text-transform: capitalize;
+    font-weight: 700;
 }
-.contact-form form .names{
+.contact-form form .names,.signup-form form .names{
     display: flex;
     justify-content: space-between;
 }
@@ -839,6 +839,22 @@ body{
     height: 100%;
 
 }
+.input-group i{
+    color: var(--admin-icons);
+    cursor: pointer;
+    width: 20px;
+    text-align: center;
+    margin-left: auto;
+    position: relative;
+    top: -30px;
+    margin-right: 12px;
+}
+.input-group i.active::before{
+    color: var(--black);
+    font-weight: 700;
+    transition: 0.8s;
+
+}
 .input-group label{
     width: 100%;
     padding: 5px;
@@ -847,7 +863,7 @@ body{
     margin-bottom: 4px;
     font-weight: 700;
 }
-.input-group input,textarea{
+.input-group input,textarea,select{
     padding: 9px;
     outline: none;
     border: 1px solid var(--chocolate);
@@ -855,7 +871,7 @@ body{
     width: 100%;
     cursor: pointer;
 }
-.contact-form form button,.adminlogin-form form button{
+.contact-form form button,.adminlogin-form form button,.signup-form form button{
     padding: 5px;
     background-color:var(--chocolate) ;
     text-align: center;
@@ -1120,6 +1136,9 @@ body{
     .header{
         display: block;
     }
+    .header-graphic{
+        width: 100%;
+    }
    
     .header .navbar-toggler{
         display: block;
@@ -1186,6 +1205,9 @@ body{
     .about-text .text {
         font-size: 0.9em;
     }
+    .blogslist{
+        display: block;
+    }
     .readBlogcard,.comments{
         width: 100%;
     }
@@ -1240,7 +1262,8 @@ body{
     .blog-card{
         display: block;
         width: 100%;
-        height: 100%;
+        height: 240px;
+        margin-top: 16px;
     }
     .readBlogcard .card-image{
         width: 100%;
@@ -1256,15 +1279,15 @@ body{
     width: 100%;
     }
 
-    .contact-body{
+    .contact-body,.signup-body{
         width: 100%;
         display: block;
         padding: 12px;
     }
-    .contact-form{
+    .contact-form,.signup-form{
         margin: 24px 0;
     }
-    .contact-form form .names{
+    .contact-form form .names,.signup-form form .names{
         display: block;
     }
     .contacts{
