@@ -1,6 +1,8 @@
 
 let blogId = JSON.parse(window.localStorage.getItem('articleId'));
-const token = JSON.parse(window.localStorage.getItem('token'));
+const token = JSON.parse(window.localStorage.getItem('userToken'));
+
+let headerList = document.querySelector('.header .navbar ');
 
 const url = `https://myportofoliobrand.herokuapp.com/blogs/${blogId}`;
 
@@ -25,7 +27,7 @@ fetch(url,{
     <div class='interaction'>
     <div class='icons'>
         <label><i class='bi bi-heart'></i> ${blogData.data.likes}</label>
-        <label><i class='bi bi-chat'></i> ${blogData.data.likes}</label>
+        <label><i class='bi bi-chat'></i> ${blogData.data.comments}</label>
         <label><i class='bi bi-share'></i> 100</label>
     </div>
     </div>
@@ -33,11 +35,35 @@ fetch(url,{
 
     articlepost.innerHTML+=`<div class='adminblog-card' style='width:700px; height:200px; margin:auto; text-align:center'>
             <div style="padding:20px">
-                <p>you must login first,to comment</p>
+                <p>you must login first,to comment, please login <a href="./signin.html">here</a></p>
             </div>  
         </div>`
+
+        document.querySelector('.comment').style.display = 'none'
     }
     else{
+        headerList.innerHTML =""
+
+        headerList.innerHTML =`
+        <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                  <li>
+                    <a href="projects.html">projects</a>
+                </li>
+                <li>
+                    <a href="blogs.html">blog</a>
+                </li>
+                <li>
+                    <a href="contact.html">contact</a>
+                </li>
+                <li>
+                    <a onclick= logout()>Logout</a>
+                </li>
+            </ul>
+        `
+
         articlepost.innerHTML=`<div class='readBlogcard'>
         <div class='datetime'>
         <p>${blogData.data.time}</p>

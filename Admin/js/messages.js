@@ -24,7 +24,7 @@ window.onload=()=>{
 
 const getMessages = (message)=>{
     Object.values(message).forEach(element => {
-        output +=`<a href='messages_area.html?article_id=${element._id}'>                
+        output +=`<a href='messages_area.html?article_id=${element._id}' onclick = getmessage(this.id) id='${element._id}'>                
             <div class='message-details'>
                 <span>${element.Firstname} ${element.Lastname}</span>
                 <p>${element.Message}</p>
@@ -36,6 +36,11 @@ const getMessages = (message)=>{
         </a>`
     })
     messagesList.innerHTML = output;
+}
+
+function getmessage(key){
+    console.log(key);
+    localStorage.setItem("messageId",JSON.stringify(key));
 }
 
 if(!token){
@@ -72,8 +77,4 @@ if(!token){
 }
 
 
-function deletemessage(key){
-    firebase.database().ref('contactsMessages/'+key).remove();
-        alert("message "+ key + " deleted succesfully")
-        getmessages();
-}
+

@@ -104,62 +104,6 @@
             <a href="blogs.html">view all</a>
         </div>
         <div class="blog-body">
-            <a href="">
-                <div class="blog-col">
-                    <div class="blog-image">
-                        <img src="images/Team.png" alt="">
-                    </div>
-                    <div class="blog-title">
-                        <p>Team work</p>
-                    </div>
-                    <div class="blog-details">
-                        <p>collaborate with others</p>
-                    </div>
-                </div>
-            </a>
-                
-            <a href="">
-                <div class="blog-col">
-                    <div class="blog-image">
-                        <img src="images/lg-leverage-of-coding.jpg" alt="">
-                    </div>
-                    <div class="blog-title">
-                        <p>workshops</p>
-                    </div>
-                    <div class="blog-details">
-                        <p>best languages for begginers</p>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="blog-col">
-                    
-                    <div class="blog-image">
-                        <img src="images/nodejs-1024x768.png" alt="">
-                    </div>
-                    <div class="blog-title">
-                        <p>node js</p>
-                    </div>
-                    <div class="blog-details">
-                        <p>ed et urna sit amet neque varius</p>
-                    </div>            
-                </div>
-            </a>
-            <a href="">
-                <div class="blog-col">
-                
-                    <div class="blog-image">
-                        <img src="images/Team.png" alt="">
-                    </div>
-                    <div class="blog-title">
-                        <p>mentorship</p>
-                    </div>
-                    <div class="blog-details">
-                        <p>ed et urna sit amet neque varius</p>
-                    </div>
-                
-                </div>
-            </a>
             
         </div>
     </div>
@@ -169,13 +113,7 @@
                 <div class="skills-header">
                     <h4>Skills</h4>
                 </div>
-                <div class="skills-image">
-                    <img src="images/512px-HTML5_logo_and_wordmark.svg.png" alt="">
-                    <img src="images/CSS3_logo_and_wordmark.svg.png" alt="">
-                    <img src="images/png-transparent-django-python-computer-icons-logo-python-text-label-rectangle.png" alt="">
-                    <img src="images/2048px-Unofficial_JavaScript_logo_2.svg.png" alt=""> 
-                    <img src="images/png-transparent-django-python-computer-icons-logo-python-text-label-rectangle.png" alt="">
-                    <img src="images/2048px-Unofficial_JavaScript_logo_2.svg.png" alt=""> 
+                <div class="skills-image"> 
                 </div>
                 
             
@@ -184,8 +122,10 @@
                 <div class="newsletter-header">
                     <h4>subscribe to our newsletter</h4>
                 </div>
-                <form action="" method="post">
-                    <input type="email" name="newsletteremail" id="" placeholder="Email address">
+                <p class="feedback-text"></p>
+                <form action="" method="post" class="newsletter-form">
+                    
+                    <input type="email" name="newsletteremail" id="email" placeholder="Email address">
                     <button type="submit">Subscribe</button>
                 </form>
             </div>
@@ -205,31 +145,9 @@
     <div class="footer">
         <p>Designed by Gedeon</p>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
-
-	<script>
-    const form = document.querySelector(".postarticleform")
-
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyDLAvVQHhH77t1exGqXQLH4sefOHXkNqP0",
-    authDomain: "myportofolio-db810.firebaseapp.com",
-    databaseURL: "https://myportofolio-db810-default-rtdb.firebaseio.com",
-    projectId: "myportofolio-db810",
-    storageBucket: "myportofolio-db810.appspot.com",
-    messagingSenderId: "906114197466",
-    appId: "1:906114197466:web:6eda95d8950bd999d482e3"
-  };
-  // Initialize Firebase
-  const app = firebase.initializeApp(firebaseConfig);
-</script>
 <script src="js/index.js"></script>
 <script src="js/backtop.js"></script>
 <script src="js/burger.js"></script>
+<script src="js/logout.js"></script>
 </body>
 </html>

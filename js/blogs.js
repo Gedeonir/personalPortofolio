@@ -2,9 +2,49 @@
 let articlepost = document.querySelector('.blogslist');
 let output = ""
 
+const token = JSON.parse(window.localStorage.getItem('userToken'));
+let headerList = document.querySelector('.header .navbar ');
+
+
+if (token) {
+    headerList.innerHTML =""
+
+        headerList.innerHTML =`
+        <ul>
+                <li>
+                    <a href="" class ='home'>Home</a>
+                </li>
+                <li>
+                    <a href="" class='project-link'>projects</a>
+                </li>
+                <li>
+                    <a href="" class='blogs'>blog</a>
+                </li>
+                <li>
+                    <a href="contact.html" class='contact'>contact</a>
+                </li>
+                <li>
+                    <a onclick= logout()>Logout</a>
+                </li>
+            </ul>
+        `
+
+        document.querySelector(".navbar .home").href = 'index.html?token=' + token;
+        document.querySelector(".navbar .project-link").href = 'projects.html?token=' + token;
+        document.querySelector(".navbar .blogs").href = 'blogs.html?token=' + token;
+        document.querySelector(".navbar .contact").href = 'contact.html?token=' + token;
+}
+
 const getBlogs = (blogs)=>{
     Object.values(blogs).forEach(element => {
+
+        // let postedDate = new Date(element.time);
+        // let todayDate = new Date()
+        // let Difference_In_Time =new Date( todayDate - postedDate)
         
+        // console.log(Difference_In_Time.getHours(),element._id);
+
+
         output +=
        ` <a  id='${element._id}' onclick='getblogid(this.id)'>
             <div class='blog-card'>

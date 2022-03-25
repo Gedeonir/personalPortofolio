@@ -49,5 +49,6 @@ if(!token){
     document.querySelector(".sidebar .messages").href = 'messages.html?token=' + token;
     document.querySelector(".sidebar .blogs").href = 'blogadmin.html?token=' + token;
     document.querySelector(".sidebar .home").href = 'index.html?token=' + token;
+    document.querySelector(".sidebar .users").href = 'users.html?token=' + token;
 
 }

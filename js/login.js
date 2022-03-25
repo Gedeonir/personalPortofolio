@@ -25,7 +25,8 @@ body:JSON.stringify(
 .then(json => {
     if(json.message){
         alert(json.message);
-        localStorage.setItem("token",JSON.stringify(json.token));
+        localStorage.setItem("userToken",JSON.stringify(json.token));
+        window.location.href='./index.html?token='+json.token
 
     }else{
         feedbacktext.style.color = "red";

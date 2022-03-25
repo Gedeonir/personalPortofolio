@@ -28,13 +28,13 @@
 						<span class="title">Dashboard</span>
 					</a>
 				</li>
-				<li>
+				<li class="active">
 					<a href="" class="blogs">
 						<span class="icon"><i class="bi bi-chat-square"></i></span>
 						<span class="title">blogs</span>
 					</a>
 				</li>
-				<li class="active">
+				<li>
 					<a href="" class="messages">
 						<span class="icon"><i class="bi bi-envelope"></i></span>
 						<span class="title">Messages</span>
@@ -44,6 +44,12 @@
 					<a href="" class="settings">
 						<span class="icon"><i class="bi bi-gear"></i></span>
 						<span class="title">Settings</span>
+					</a>
+				</li>
+                <li>
+					<a href="" class="users">
+						<span class="icon"><i class="bi bi-person"></i></span>
+						<span class="title">Users</span>
 					</a>
 				</li>
 			</ul>
@@ -61,28 +67,18 @@
 					<button><i class="bi bi-bell"></i></button>
 					<button onclick="logout()"><i class="bi bi-box-arrow-in-left"></i></button>   
 				</div>
-  			</div>
-            <div class="messages-section">
-                <div class="search-bar">
-                    <form action="#" method="post">
-                        <input type="text" name="search" id="search-bar" placeholder="search messages">
-                        <button type="submit"><i class="bi bi-search"></i></button>
-                    </form>
-                </div>
-			
-                <div class="message-list">
-                  
-					
-                </div>
+			</div>
+            <div class="usercounts" style="padding: 6px; text-transform: uppercase; font-weight: 700;"></div>
+            <div class="users-list">
             </div>
+
 			<div class="footer">
 				<p>Designed by Gedeon</p>
 			</div>
 		</div>
 	</div>
-	<!-- <script src="js/settings.js"></script> -->
-	<script src="js/burger.js"></script>
-	<script src="js/messages.js"></script>
-	<script src="js/logout.js"></script>
+<script src="js/users.js"></script>
+<script src="js/burger.js"></script>
+<script src="js/logout.js"></script>
 </body>
 </html>
