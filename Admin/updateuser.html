@@ -28,13 +28,13 @@
 						<span class="title">Dashboard</span>
 					</a>
 				</li>
-				<li>
+				<li class="active">
 					<a href="" class="blogs">
 						<span class="icon"><i class="bi bi-chat-square"></i></span>
 						<span class="title">blogs</span>
 					</a>
 				</li>
-				<li class="active">
+				<li>
 					<a href="" class="messages">
 						<span class="icon"><i class="bi bi-envelope"></i></span>
 						<span class="title">Messages</span>
@@ -61,28 +61,48 @@
 					<button><i class="bi bi-bell"></i></button>
 					<button onclick="logout()"><i class="bi bi-box-arrow-in-left"></i></button>   
 				</div>
-  			</div>
-            <div class="messages-section">
-                <div class="search-bar">
-                    <form action="#" method="post">
-                        <input type="text" name="search" id="search-bar" placeholder="search messages">
-                        <button type="submit"><i class="bi bi-search"></i></button>
-                    </form>
-                </div>
-			
-                <div class="message-list">
-                  
-					
-                </div>
-            </div>
+			</div>
+			<div class="article-post-form">
+                <form action="" method="post" class="editform">
+                    <div class='names'>
+                        <div class='input-group'>
+                            <input type='text' name='Firstname'  class='firstname' required>
+                        </div>
+                        <div class='input-group'>
+                            <input type='text' name='lastname' class='lastname' required>
+                        </div>
+                    </div>
+                    <div class='input-group'>
+                        <input type='email' name='email'  class='emailaddress' required>
+                    </div>
+                    <div class='input-group'>
+                        <input type='text' class='username' required>
+                    </div>
+                    <div class='input-group'>
+                        <input type='number' class='phone' required>
+                    </div>
+                    <div class='input-group'>
+                        <select name='gender' class='gender'>
+                            <option value='Female'>Female</option>
+                            <option value='Male'>Male</option>
+                        </select>
+                    </div>       					
+                    
+                    <div class="input-group">
+                        <button type="submit" name="save">save</button>
+                    </div>
+                </form>
+				
+			</div>
 			<div class="footer">
 				<p>Designed by Gedeon</p>
 			</div>
 		</div>
 	</div>
-	<!-- <script src="js/settings.js"></script> -->
-	<script src="js/burger.js"></script>
-	<script src="js/messages.js"></script>
-	<script src="js/logout.js"></script>
+
+<script src="js/burger.js"></script>
+<script src="js/logout.js"></script>
+<script src="js/updateUser.js"></script>
+"></script>
 </body>
 </html>

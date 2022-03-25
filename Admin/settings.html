@@ -68,128 +68,29 @@
 						<li>
 							<button class="personal-info">Personal information</button>
 							<div class="personal-settings-details">
-								<div class="profile-photo">
-									<img src="../images/MINE.png" alt="">
-									<div class="changepicture">
-									<a href="">Change photo</a>	
-									</div>
-									
-								</div>
-								<div class="identifications">
-									<div><button onclick="Editform()" class="Editbtn">Edit</button></div>
-									<div class="names">
-										<div class="identification-item">
-											<label for="firstname">Firstname</label>
-											<p>IRAFASHA</p>
-										</div>
-										<div class="identification-item">
-											<label for="lastname">Lastname</label>
-											<p>Gedeon</p>
-										</div>
-										
-									</div>
-									<div class="identification-item">
-										<label for="email">Email Address</label>
-										<p>irafasha.jedy12@gmail.com</p>
-									</div>
-									<div class="identification-item">
-										<label for="bio">Bio</label>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-									</div>
-									<div class="identification-item">
-										<label for="contacts">Contact</label>
-										<p>0780689938</p>
-									</div>
-									<div class="identification-item">
-										<label for="gender">gender</label>
-										<p>Male</p>
-									</div>
-									<div class="identification-item">
-										<label for="dob">birthday</label>
-										<p>0780689938</p>
-									</div>
-								</div>
-								<form action="" method="post" class="editform">
-									<div><button onclick="Editform()" class="Editbtn">Cancel</button></div>						
-									
-									<div class="input-group">
-										<button type="submit" name="save">save</button>
-									</div>
-									
-	
-								</form>
 							</div>
 							
-						</li>
-						<li>
-							<button class="about-info">About me</button>
-							<div class="about-me">
-								<div class="about-text">
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										<a href=""><i class="bi bi-pencil-fill"></i></a>
-									</p>
-								</div>
-							</div>
 						</li>
 						<li>
 							<button class="yourskills">my skills</button>
 							
 							<div class="skills-settings">
-								<div class="identification-item">
-									<p>Html</p>
-									<div>
-										<a href=""><i class="bi bi-pencil-fill"></i></a>
-										<a href=""><i class="bi bi-trash-fill"></i></a>
-									</div>
-										
-								</div>
-								<div class="identification-item">
-									<p>Css</p>
-									<div>
-										<a href=""><i class="bi bi-pencil-fill"></i></a>
-										<a href=""><i class="bi bi-trash-fill"></i></a>
-									</div>
-								
-								</div>
-								<div class="identification-item">
-									<p>Javascript</p>
-									<div>
-										<a href=""><i class="bi bi-pencil-fill"></i></a>
-										<a href=""><i class="bi bi-trash-fill"></i></a>
-									</div>
-									
-								</div>
-								<div class="identification-item">
-									<p>Django</p>
-									<div>
-										<a href=""><i class="bi bi-pencil-fill"></i></a>
-										<a href=""><i class="bi bi-trash-fill"></i></a>
-									</div>
-									
-								</div>
-							
+								<div class="skillsList">
+
+								</div>							
 								<div class="action-button"> 
 									<button class="addnew"><i class="bi bi-plus-lg"></i>Add new skills</button>
 								</div>
 								<div class="add-skills">
-									<form action="" method="post">
+									<form action="" method="post" class="skillForm">
 										<div class="input-group">
-											<input type="text" placeholder="Enter a new skill">
-											<select name="level">
+											<input type="text" placeholder="Enter a new skill" class="skill">
+											<select name="level" class="level">
 												<option value="beginner">Beginner</option>
 												<option value="intermediate">Intermediate</option>
 												<option value="professional">Professional</option>
 												<option value="expert">Expert</option>
 											</select>									
-										</div>
-										<div class="input-group">
-											<input type="file" name="skill-image" id="">
 										</div>
 										
 										<div class="input-group">
@@ -203,46 +104,7 @@
 						<li>
 							<button class="projects">Projects</button>
 						</li>
-						<li>
-							<button class="Banner-data">Banner contents</button>
-							<div class="Banner-datasettings">
-								<div class="contents">
-									<div class="input-group">
-										<label for="title">Title</label>
-										<p>Title</p>
-									</div>
-									<div class="input-group">
-										<label for="title">Body</label>
-										<p>Body</p>
-									</div>
-									<div class="input-group">
-										<label for="title">Image</label>
-										<img src="" alt="">
-									</div>
-
-								</div>
-								<div class="Bannerform">
-									<form action="" method="post">
-										<div class="input-group">
-											<input type="text" name="title" placeholder="title" class="Bannertitle" >
-										</div>
-										<div class="input-group">
-											<input type="file" name="image" id="Bannerimage">
-										</div>
-										<div class="input-group">
-											<textarea rows="5" name="article" class="Bannerbody"></textarea>
-										</div>
-										
-					
-										<div class="buttons">
-											<div class="input-group savebutton">
-												<button type="submit" name="send" onclick="save()">Post</button>
-											</div>
-										</div>
-								</form>
-								</div>
-							</div>
-						</li>
+					</ul>
 				</div>
 			
 			
@@ -251,31 +113,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
-
-	<script>
-    const form = document.querySelector(".postarticleform")
-
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyDLAvVQHhH77t1exGqXQLH4sefOHXkNqP0",
-    authDomain: "myportofolio-db810.firebaseapp.com",
-    databaseURL: "https://myportofolio-db810-default-rtdb.firebaseio.com",
-    projectId: "myportofolio-db810",
-    storageBucket: "myportofolio-db810.appspot.com",
-    messagingSenderId: "906114197466",
-    appId: "1:906114197466:web:6eda95d8950bd999d482e3"
-  };
-  // Initialize Firebase
-  const app = firebase.initializeApp(firebaseConfig);
-</script>
 	<script src="js/settings.js"></script>
 	<script src="js/burger.js"></script>
-	<script src="js/index.js"></script>
+	<script src="js/logout.js"></script>
 </body>
 </html>

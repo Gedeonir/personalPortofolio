@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
 <body>
-	<div class="header">
+    <div class="header">
         <div class="header-graphic">
             <div class="logo">
                 <img src="images/Logo.png" alt="Logo">
@@ -33,7 +33,13 @@
                     <a href="contact.html">contact</a>
                 </li>
                 <li>
-                    <a href="admin/login.html">Login</a>
+                    <a href="signup.html">signup</a>
+                </li>
+                <li >
+                    <a href="signin.html">Users login</a>
+                </li>
+                <li>
+                    <a href="admin/login.html">admin login</a>
                 </li>
             </ul>
         </div>
@@ -42,24 +48,24 @@
     	<div class="contact-form">
     		<h1>leave us a message</h1>
     		<form action="#" method="post" id="contactform">
-                <p class="error-text"></p>
+                <p class="feedback-text"></p>
     			<div class="names">
     				<div class="input-group">
     					<label for="firstname">Firstname:</label>
-    					<input type="text" name="firstname" placeholder="Firstname" class="firstname" required >
+    					<input type="text" name="firstname" placeholder="Firstname"   class="firstname"  >
     				</div>
     				<div class="input-group">
     					<label for="lastname">Lastname:</label>
-    					<input type="text" name="lastname" placeholder="Lastname" class="lastname" required >
+    					<input type="text" name="lastname"   placeholder="Lastname" class="lastname"  >
     				</div>
     			</div>
     			<div class="input-group">
     				<label for="email">Email:</label>
-    				<input type="email" name="email" placeholder="Email" class="email" required>
+    				<input type="email" name="email" placeholder="Email"  class="email" >
     			</div>
     			<div class="input-group">
     				<label for="message">Message:</label>
-    				<textarea  name="message" placeholder="Message" class="message" required>
+    				<textarea  name="message"   placeholder="Message" class="message" >
 					</textarea>
     			</div>
                 <div class="input-group">
@@ -94,31 +100,8 @@
         <p>Designed by Gedeon</p>
     </div>
     
-    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
-
-    <script>
-    
-    
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-        apiKey: "AIzaSyDLAvVQHhH77t1exGqXQLH4sefOHXkNqP0",
-        authDomain: "myportofolio-db810.firebaseapp.com",
-        databaseURL: "https://myportofolio-db810-default-rtdb.firebaseio.com",
-        projectId: "myportofolio-db810",
-        storageBucket: "myportofolio-db810.appspot.com",
-        messagingSenderId: "906114197466",
-        appId: "1:906114197466:web:6eda95d8950bd999d482e3"
-        };
-        // Initialize Firebase
-        const app = firebase.initializeApp(firebaseConfig);
-
-        
-    </script>
     <script src="js/contacts.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/logout.js"></script>
 </body>
 </html>

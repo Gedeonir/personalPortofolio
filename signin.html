@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio|Homepage</title>
-    <link rel="stylesheet" href="css/style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login into account</title>
+	<link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
 <body>
-    <div class="header">
+	<div class="header">
         <div class="header-graphic">
             <div class="logo">
                 <img src="images/Logo.png" alt="Logo">
@@ -36,7 +35,7 @@
                 <li>
                     <a href="signup.html">signup</a>
                 </li>
-                <li >
+                <li class="active">
                     <a href="signin.html">Users login</a>
                 </li>
                 <li>
@@ -45,23 +44,39 @@
             </ul>
         </div>
     </div>
-    <div class="blog-contents">
+    <div class="signup-body">
+    	<div class="signup-form">
+    		<h1>log into your account</h1>
+    		<form action="#" method="post" id="signupform">
+                <p class="feedback-text"></p>
+    			<div class="input-group">
+    				<label for="email">Email:</label>
+    				<input type="email" name="email"  placeholder="Email" class="email" >
+    			</div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password"  placeholder="password" class="password"  >
+                    <i class="bi bi-eye"></i>
+                </div>
+                <div class="input-group">
+                    <a href="">Forgot password?</a>
+                    <a href="signup.html">no Acount yet?</a>
+                </div>
+                <div class="input-group">
+                    <button type="submit" name="send">login</button>
+                </div>
+               
+    			
+    		</form>
+    		
+    	</div>
     </div>
-    <div class='comment'>
-        <form method='post' class='commentForm'>
-            <input type='text' name='comment' id='comment'  placeholder='comment' required>
-            <button type='submit' onclick='sendcomment()'>Send</button>
-        </form>
-    </div>
-    <div class='comments'>
-        
     </div>
     <div class="footer">
         <p>Designed by Gedeon</p>
     </div>
-  
-    <script src="js/Readblog.js"></script>
+    <script src="admin/js/pass_hide_and_show.js"></script>
+    <script src="js/login.js"></script>
     <script src="js/burger.js"></script>
-    <script src="js/logout.js"></script>
 </body>
 </html>
